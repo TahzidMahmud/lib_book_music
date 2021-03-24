@@ -24,6 +24,8 @@
 
     <!-- Main Style CSS -->
     <link rel="stylesheet" href={{ asset("css/style.css") }}>
+     <!-- style css -->
+     <link rel="stylesheet" href={{ asset("css/style2.css") }}>
 
     <!-- Modernizer JS -->
     <script src={{ asset("js/vendor/modernizr-2.8.3.min.js") }}></script>
