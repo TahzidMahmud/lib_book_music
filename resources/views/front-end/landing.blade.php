@@ -1,28 +1,34 @@
 @extends('layouts.front-end.theme')
 @section( 'section')
 
+<style>
+a{
+    background-color:transparent !important;
+}
+</style>
 <!-- Feature Product Section Start -->
 <header>
     <!-- header inner -->
-    <div class="header">
-       <div class="container">
-          <div class="row">
-             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-                <div class="full">
+    <div class="header" style="background-color:rgba(0,0,0,0.2);">
+       <div class="container" style="background-color:transparent !important">
+          <div class="row" style="background-color:transparent !important">
+             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section" style="background-color:transparent !important">
+                <div class="full" style="background-color:transparent !important">
 
                 </div>
              </div>
-             <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-                <div class="menu-area">
-                   <div class="limit-box">
-                      <nav class="main-menu">
-                         <ul class="menu-area-main">
-                            <li> <a href="{{ url('/')}}">Home</a> </li>
-                            <li> <a href="#about">About us</a> </li>
-                            <li><a href="{{ url('/books')}}">Our Books</a></li>
-                            <li><a href="#Contact">Contact us</a></li>
-                            <li class="mean-last"> <a href="#"><img src="images/search_icon.png" alt="#" /></a> </li>
-                            <li class="mean-last"> <a href="#"><img src="images/top-icon.png" alt="#" /></a> </li>
+             <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9" style="background-color:transparent !important">
+                <div class="menu-area" style="background-color:transparent !important">
+                   <div class="limit-box" style="background-color:transparent !important">
+                      <nav class="main-menu" style="background-color:transparent !important">
+                         <ul class="menu-area-main" style="background-color:transparent !important">
+                            <li style="background-color:transparent !important"> <a href="{{ url('/')}}">Home</a> </li>
+                            <li style="background-color:transparent !important"> <a href="#about">About us</a> </li>
+                            <li style="background-color:transparent !important"><a href="{{ url('/books')}}">Our Books</a></li>
+                            <li style="background-color:transparent !important"><a href="{{ url('/')}}">Music</a></li>
+                            <li style="background-color:transparent !important"><a href="#Contact">Contact us</a></li>
+                            <li style="background-color:transparent !important" class="mean-last"> <a href="#"><img src="images/search_icon.png" alt="#" /></a> </li>
+                            <li style="background-color:transparent !important" class="mean-last"> <a href="#"><img src="images/top-icon.png" alt="#" /></a> </li>
                          </ul>
                       </nav>
                    </div>
@@ -48,8 +54,8 @@
              <img class="first-slide" src="images/banner.jpg" alt="First slide">
              <div class="container">
                 <div class="carousel-caption relative">
-                   <h1>The Best Libraries That<br> Every Book Lover Must<br> Visit!</h1>
-                   <p>adipiscing elit, sed do eiusmod tempor incididunt ut<br> labore et dolore magna aliqua. Ut enim ad minim<br> veniam, quis nostrud exercitation </p>
+                   <h1>Educate – Captivate – Connect.<br> Explore the World’s Knowledge.<br> Visit!</h1>
+                   <p>There are lots of books present in our bookstore with different types of books<br> such as literature, poetry, fiction, non-fiction and related to every specific topic.</p>
                    <div class="button_section"> <a class="main_bt" href="#">Read More</a>  </div>
 
                 </div>
@@ -98,6 +104,11 @@
        </a>
     </div>
  </section>
+ <div>
+         <h1 class="text text-danger text-center">
+            <b>Coming Soon....!!!</b>
+         </h1>
+      </div>
  <!-- about -->
  <div class="about" id="about">
     <div class="container">
