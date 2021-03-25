@@ -19,7 +19,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('front-end.landing');
 });
-
+Route::get('/books', function () {
+    return view('front-end.productsView');
+})->name('books');
+Route::get('/books-single/{product_name}/{cat}', 'ProductController@index')->name('book');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/download',function(){
+    return view('front-end.landing');
+})->name('download');

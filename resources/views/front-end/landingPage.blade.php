@@ -52,7 +52,7 @@
                               <ul class="menu-area-main">
                                  <li class="active"> <a href="index.html">Home</a> </li>
                                  <li> <a href="about.html">About us</a> </li>
-                                 <li><a href="books.html">Our Books</a></li>
+                                 <li><a href="{{ url('/books')}}">Our Books</a></li>
                                  <li><a href="library.html">library</a></li>
                                  <li><a href="contact.html">Contact us</a></li>
                                  <li class="mean-last"> <a href="#"><img src="images/search_icon.png" alt="#" /></a> </li>
