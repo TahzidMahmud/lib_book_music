@@ -4,7 +4,7 @@
 <!-- Feature Product Section Start -->
 <header>
     <!-- header inner -->
-    <div class="header">
+    <div class="header" style="background-color: rgba(0, 0, 0, 0.486);">
        <div class="container">
           <div class="row">
              <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
@@ -13,7 +13,7 @@
                 </div>
              </div>
              <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-                <div class="menu-area">
+                <div class="menu-area" >
                    <div class="limit-box">
                       <nav class="main-menu">
                          <ul class="menu-area-main">
