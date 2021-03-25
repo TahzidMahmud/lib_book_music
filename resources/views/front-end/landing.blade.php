@@ -68,12 +68,7 @@ a{
                    <h1>The Best Libraries That<br> Every Book Lover Must<br> Visit!</h1>
                    <p>adipiscing elit, sed do eiusmod tempor incididunt ut<br> labore et dolore magna aliqua. Ut enim ad minim<br> veniam, quis nostrud exercitation </p>
                    <div class="button_section"> <a class="main_bt" href="#">Read More</a>  </div>
-                   <ul class="locat_icon">
-                      <li> <a href="#"><img src="icon/facebook.png"></a></li>
-                      <li> <a href="#"><img src="icon/Twitter.png"></a></li>
-                      <li> <a href="#"><img src="icon/linkedin.png"></a></li>
-                      <li> <a href="#"><img src="icon/instagram.png"></a></li>
-                   </ul>
+                   
                 </div>
              </div>
           </div>
