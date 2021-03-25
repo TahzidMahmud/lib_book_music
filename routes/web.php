@@ -28,4 +28,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/download',function(){
     return view('front-end.landing');
-})->name('download');
+})->middleware('auth')->name('download');

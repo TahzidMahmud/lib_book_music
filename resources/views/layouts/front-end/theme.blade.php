@@ -49,11 +49,11 @@
                        <div class="limit-box">
                           <nav class="main-menu">
                              <ul class="menu-area-main">
-                                <li class="active"> <a href="{{ url('/books')}}">Home</a> </li>
-                                <li> <a  href="{{ url('/books')}}">About us</a> </li>
+                                <li class="active"> <a href="{{ url('/')}}">Home</a> </li>
+                                <li> <a  href={{ url('/') }}>About us</a> </li>
                                 <li><a  href="{{ url('/books')}}">Our Books</a></li>
 
-                                <li><a href="contact.html">Contact us</a></li>
+                                <li><a href={{ url('/') }}>Contact us</a></li>
                                 <li class="mean-last"> <a href="#"><img src={{ asset("images/search_icon.png") }} alt="#" /></a> </li>
                                 <li class="mean-last"> <a href="#"><img src={{ asset("images/top-icon.png") }} alt="#" /></a> </li>
                              </ul>

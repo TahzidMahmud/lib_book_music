@@ -21,7 +21,7 @@
 
                              {{-- product images --}}
                         <div id="single-image-0" class="tab-pane fade show active big-image-slider">
-                            <div class="big-image"><img src={{ asset("assets/images/product/product-1.png" ) }} alt="Big Image"><a href={{ asset("assets/images/product/product-1.png" ) }}  class="big-image-popup"><i class="fa fa-search-plus"></i></a></div>
+                            <div class="big-image"><img src={{ asset("assets/images/product/product-1.jpg" ) }} alt="Big Image"><a href={{ asset("assets/images/product/product-1.jpg" ) }}  class="big-image-popup"><i class="fa fa-search-plus"></i></a></div>
                         </div>
 
 
@@ -30,7 +30,7 @@
                     <div class="thumb-image-slider nav" data-vertical="true">
 
 
-                        <a class="thumb-image active" data-toggle="tab" href="#single-image-0"><img src={{ asset("assets/images/product/product-1.png" ) }} alt="Thumbnail Image"></a>
+                        <a class="thumb-image active" data-toggle="tab" href="#single-image-0"><img src={{ asset("assets/images/product/product-1.jpg" ) }} alt="Thumbnail Image"></a>
 
 
 
