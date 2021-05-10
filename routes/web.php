@@ -35,5 +35,7 @@ Route::get('/download',function(){
 Route::middleware(['verified','admin'])->group( function () {
     Route::get('/admin-dashboard','HomeController@dashboard')->name('admin.dashboard');
     Route::get('/create-book','HomeController@add_book')->name('admin.addbook');
+    Route::post('/store-book','HomeController@store_book')->name('admin.storebook');
+
 
 });
