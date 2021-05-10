@@ -303,6 +303,42 @@
 
   <script src="{{ asset('js/demo/chart-area-demo.js') }}" ></script>
   <script  src="{{ asset('js/demo/chart-pie-demo.js') }}"></script>
+  <script>
+
+                function cc(){
+
+                    var img=document.querySelector('#coverimage').nodeValue;
+                    let file = document.querySelector('input[type=file]').files[0];
+                    const preview = document.querySelector("#selectedimage");
+                    const cross = document.querySelector("#crossbutton");
+
+                    let reader = new FileReader();
+
+                    reader.addEventListener("load", function () {
+
+                        preview.src = reader.result;
+                        preview.style="height:300px;width:300px;border-radius:5px;"
+                        cross.style="height:2rem;width:2rem;background:darkred;border-radius:50%;color:white;cursor:pointer;padding:3px;"
+                      }, false);
+
+                      if (file) {
+                        reader.readAsDataURL(file);
+                      }
+                }
+                function cross(){
+
+                const cross = document.querySelector("#crossbutton");
+                cross.style="display:none;"
+                const preview = document.querySelector("#selectedimage");
+                preview.src="";
+                preview.style="display:none;"
+                const imginput = document.querySelector("#categoryimage");
+                imginput.value="";
+                }
+
+  </script>
+
+
 
 
 

@@ -21,12 +21,18 @@
             </div>
             <div class="form-group">
                 <label for="exampleFormControlFile" class="d-flex justify-content-center display-4">Upload Cover Image</label><br>
-                <label for="exampleFormControlFile1" class="d-flex justify-content-center"><h1 class="text-center"><i class="fas fa-image text-primary"></i></h1></label>
-                <input style="display: none;cursor:none;" type="file" class="form-control-file" id="exampleFormControlFile1">
+                <label for="coverimage" class="d-flex justify-content-center"><h1 class="text-center"><i class="fas fa-image text-primary"></i></h1></label>
+                <input style="display: none;cursor:none;" type="file" onchange="cc()" class="form-control-file" id="coverimage"  accept=".png,.jpg,.jpeg,.PNG,.JPG,.JPEG">
+                <div style="display:flex;justify-content:center;">
+                    <img src="" style="display:none;" id="selectedimage">
+                    <span style="display:none;" onclick="cross()" id="crossbutton" class="text-center">x</span>
+                </div>
+
+
             </div>
             <div class="form-group">
                 <label for="exampleFormControlFile" class="d-flex justify-content-center display-4">Upload PDF</label><br>
-                <label for="exampleFormControlFil2" class="d-flex justify-content-center"><h1 class="text-center"><i class="fas fa-upload text-primary"></i></h1></label>
+                <label for="exampleFormControlFile2" class="d-flex justify-content-center"><h1 class="text-center"><i class="fas fa-upload text-primary"></i></h1></label>
                 <input style="display: none;cursor:none;" type="file" class="form-control-file" id="exampleFormControlFile2">
             </div>
           </form>
