@@ -335,6 +335,11 @@
                 const imginput = document.querySelector("#categoryimage");
                 imginput.value="";
                 }
+                function fs(){
+
+                    var name =document.getElementById("exampleFormControlFile2").value;
+                    document.getElementById("prevf").innerHTML="Selected From :  "+name;
+                }
 
   </script>
 

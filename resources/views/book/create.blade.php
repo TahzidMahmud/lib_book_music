@@ -33,7 +33,8 @@
             <div class="form-group">
                 <label for="exampleFormControlFile" class="d-flex justify-content-center display-4">Upload PDF</label><br>
                 <label for="exampleFormControlFile2" class="d-flex justify-content-center"><h1 class="text-center"><i class="fas fa-upload text-primary"></i></h1></label>
-                <input style="display: none;cursor:none;" type="file" class="form-control-file" id="exampleFormControlFile2">
+                <input style="display: none;cursor:none;"  onchange="fs()" type="file" class="form-control-file" id="exampleFormControlFile2">
+                <h4 id="prevf" class="text text-primary text-center"></h4>
             </div>
           </form>
     </div>
