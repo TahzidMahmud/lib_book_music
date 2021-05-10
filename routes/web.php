@@ -29,3 +29,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/download',function(){
     return view('front-end.landing');
 })->middleware('auth')->name('download');
+
+
+
+Route::middleware(['verified','admin'])->group( function () {
+    Route::get('/admin-dashboard','HomeController@dashboard')->name('admin.dashboard');
+    Route::get('/create-book','HomeController@add_book')->name('admin.addbook');
+
+});

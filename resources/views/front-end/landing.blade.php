@@ -491,6 +491,18 @@ a{
             </div>
         </div>
     </div><!-- Feature Product Section End -->
+
+    <div class="row">
+        <div class="col-md-5 col-sm-12 col-5">
+
+        </div>
+     <div  class="btn col-md-2 col-sm-12 col-2" style="background-color:#81256c;color:white;">
+        <div class=""  style="z-index:100; ">
+           <a style="z-index:100;color:white;" href={{ url('/books') }} >Read More</a>
+        </div>
+     </div>
+  </div>
+
 <!-- Feature Product Section Start -->
 <div class="product-section section mb-70">
     <div class="container">
@@ -498,7 +510,7 @@ a{
 
             <!-- Section Title Start -->
             <div class="col-12 mb-40">
-                <div class="section-title-one" data-title="FEATURED ITEMS"><h1>FEATURED ITEMS</h1></div>
+                <div class="section-title-one" data-title="FEATURED MUSIC"><h1>FEATURED MUSIC</h1></div>
             </div><!-- Section Title End -->
 
 
@@ -680,7 +692,7 @@ a{
         </div>
      <div  class="btn col-md-2 col-sm-12 col-2" style="background-color:#81256c;color:white;">
         <div class=""  style="z-index:100; ">
-           <a style="z-index:100;color:white;" href={{ url('/books') }} >Read More</a>
+           <a style="z-index:100;color:white;" href={{ url('/books') }} > Explore</a>
         </div>
      </div>
   </div>
