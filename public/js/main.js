@@ -235,6 +235,10 @@
         dots: false,
         autoplay: false,
         infinite: true,
+        prevArrow:
+            '<button type="button" class="slick-prev"><i class="icofont icofont-long-arrow-left"></i></button>',
+        nextArrow:
+            '<button type="button" class="slick-next"><i class="icofont icofont-long-arrow-right"></i></button>',
         slidesToShow: 4,
 
         responsive: [

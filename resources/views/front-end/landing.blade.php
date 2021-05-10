@@ -95,38 +95,9 @@ a{
     </div>
  </section>
  <div>
-         <h1 class="text text-danger text-center">
-            <b>Coming Soon....!!!</b>
-         </h1>
-      </div>
- <!-- about -->
- <div class="about" id="about">
-    <div class="container">
-       <div class="row">
-          <div class="col-md-10 offset-md-1">
-             <div class="aboutheading">
-                <h2>About <strong class="black">Us</strong></h2>
-                <span>adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</span>
-             </div>
-          </div>
-       </div>
-       <div class="row border">
-          <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
-             <div class="about-box">
-                <p> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-                <a href="#">Read More</a>
-             </div>
-          </div>
-          <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
-             <div class="about-box">
-                <figure><img src="images/about.png" alt="img" /></figure>
-             </div>
-          </div>
-       </div>
-    </div>
- </div>
 
- <!-- end about -->
+      </div>
+
  <!-- Library -->
  <div class="Library">
     <div class="container">
@@ -183,7 +154,7 @@ a{
                             <!-- Product Slider Wrap Start -->
                             <div class="product-slider-wrap product-slider-arrow-one">
                                 <!-- Product Slider Start -->
-                                <div class="product-slider product-slider-4">
+                                <div class="product-slider product-slider-4-full">
 
                                     <div class="col pb-20 pt-10">
                                         <!-- Product Start -->
@@ -363,7 +334,7 @@ a{
                             <!-- Product Slider Wrap Start -->
                             <div class="product-slider-wrap product-slider-arrow-one">
                                 <!-- Product Slider Start -->
-                                <div class="product-slider product-slider-4">
+                                <div class="product-slider product-slider-4-full">
 
                                     <div class="col pb-20 pt-10">
                                         <!-- Product Start -->
@@ -509,55 +480,6 @@ a{
 
                                         </div><!-- Product End -->
                                     </div>
-
-                                    <div class="col pb-20 pt-10">
-                                        <!-- Product Start -->
-                                        <div class="ee-product">
-
-                                            <!-- Image -->
-                                            <div class="image">
-
-                                                <a href="single-product.html" class="img"><img src="assets/images/product/product-5.png" alt="Product Image"></a>
-
-                                                <div class="wishlist-compare">
-                                                    <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
-                                                    <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a>
-                                                </div>
-
-
-
-                                            </div>
-
-                                            <!-- Content -->
-                                            <div class="content">
-
-                                                <!-- Category & Title -->
-                                                <div class="category-title">
-
-                                                    <a href="{{ route('book',['product_name'=>'Game Of Thrones','cat'=>'Thriller']) }}" class="cat">Camera</a>
-                                                    <h5 class="title"><a href="{{ route('book',['product_name'=>'Game Of Thrones','cat'=>'Thriller']) }}">Mony Handycam Z 105</a></h5>
-
-                                                </div>
-
-                                                <!-- Price & Ratting -->
-                                                <div class="price-ratting">
-
-
-                                                    <div class="ratting">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-half-o"></i>
-                                                        <i class="fa fa-star-o"></i>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-                                        </div><!-- Product End -->
-                                    </div>
-
                                 </div><!-- Product Slider End -->
                             </div><!-- Product Slider Wrap End -->
 
@@ -569,6 +491,187 @@ a{
             </div>
         </div>
     </div><!-- Feature Product Section End -->
+<!-- Feature Product Section Start -->
+<div class="product-section section mb-70">
+    <div class="container">
+        <div class="row">
+
+            <!-- Section Title Start -->
+            <div class="col-12 mb-40">
+                <div class="section-title-one" data-title="FEATURED ITEMS"><h1>FEATURED ITEMS</h1></div>
+            </div><!-- Section Title End -->
+
+
+
+            <!-- Product Tab Content Start -->
+            <div class="col-12">
+                <div class="tab-content">
+
+                    <!-- Tab Pane Start -->
+                    <div class="tab-pane fade show active" id="tab-one">
+
+                        <!-- Product Slider Wrap Start -->
+                        <div class="product-slider-wrap product-slider-arrow-one">
+                            <!-- Product Slider Start -->
+                            <div class="product-slider product-slider-4-full">
+
+                                <div class="col pb-20 pt-10">
+                                    <!-- Product Start -->
+                                    <div class="ee-product">
+
+                                        <!-- Image -->
+                                        <div class="image">
+
+                                            <a href="{{ route('book',['product_name'=>'Game Of Thrones','cat'=>'Thriller']) }}" class="img"><img src="assets/images/product/product-1.jpg" alt="Product Image"></a>
+
+                                            <div class="wishlist-compare">
+                                                <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
+                                                <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a>
+                                            </div>
+
+
+
+                                        </div>
+
+                                        <!-- Content -->
+                                        <div class="content">
+
+                                            <!-- Category & Title -->
+                                            <div class="category-title">
+
+                                                <a href="{{ route('book',['product_name'=>'Game Of Thrones','cat'=>'Thriller']) }}" class="cat">Thriller</a>
+                                                <h5 class="title"><a href="{{ route('book',['product_name'=>'Game Of Thrones','cat'=>'Thriller']) }}">Game Of Thrones</a></h5>
+
+                                            </div>
+
+                                            <!-- Price & Ratting -->
+
+                                        </div>
+
+                                    </div><!-- Product End -->
+                                </div>
+
+                                <div class="col pb-20 pt-10">
+                                    <!-- Product Start -->
+                                    <div class="ee-product">
+
+                                        <!-- Image -->
+                                        <div class="image">
+
+
+                                            <a href="{{ route('book',['product_name'=>'Harry Potter and the Sorcerer Stone','cat'=>'Science Fiction & Fantasy']) }}" class="img"><img src="assets/images/product/product-1.jpg" alt="Product Image"></a>
+
+                                            <div class="wishlist-compare">
+                                                <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
+                                                <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a>
+                                            </div>
+
+
+
+                                        </div>
+
+                                        <!-- Content -->
+                                        <div class="content">
+
+                                            <!-- Category & Title -->
+                                            <div class="category-title">
+
+                                                <a href="{{ route('book',['product_name'=>'Game Of Thrones','cat'=>'Thriller']) }}" class="cat">Science Fiction & Fantasy</a>
+                                                <h5 class="title"><a href="{{ route('book',['product_name'=>'Game Of Thrones','cat'=>'Thriller']) }}">Harry Potter </a></h5>
+
+                                            </div>
+
+                                            <!-- Price & Ratting -->
+
+                                        </div>
+
+                                    </div><!-- Product End -->
+                                </div>
+
+                                <div class="col pb-20 pt-10">
+                                    <!-- Product Start -->
+                                    <div class="ee-product">
+
+                                        <!-- Image -->
+                                        <div class="image">
+
+                                            <a href="{{ route('book',['product_name'=>'The 48 Laws of Power','cat'=>'Business & Money']) }}" class="img"><img src="assets/images/product/product-1.jpg" alt="Product Image"></a>
+
+                                            <div class="wishlist-compare">
+                                                <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
+                                                <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a>
+                                            </div>
+
+
+
+                                        </div>
+
+                                        <!-- Content -->
+                                        <div class="content">
+
+                                            <!-- Category & Title -->
+                                            <div class="category-title">
+
+                                                <a href="{{ route('book',['product_name'=>'Game Of Thrones','cat'=>'Thriller']) }}" class="cat">Business & Money</a>
+                                                <h5 class="title"><a href="{{ route('book',['product_name'=>'Game Of Thrones','cat'=>'Thriller']) }}">The 48 Laws of Power</a></h5>
+
+                                            </div>
+
+                                            <!-- Price & Ratting -->
+
+
+                                        </div>
+
+                                    </div><!-- Product End -->
+                                </div>
+
+                                <div class="col pb-20 pt-10">
+                                    <!-- Product Start -->
+                                    <div class="ee-product">
+
+                                        <!-- Image -->
+                                        <div class="image">
+
+                                            <a href="{{ route('book',['product_name'=>'Dare to Lead','cat'=>'Business Management & Leadership']) }}" class="img"><img src="assets/images/product/product-1.jpg" alt="Product Image"></a>
+                                            <div class="wishlist-compare">
+                                                <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
+                                                <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a>
+                                            </div>
+
+
+
+                                        </div>
+
+                                        <!-- Content -->
+                                        <div class="content">
+
+                                            <!-- Category & Title -->
+                                            <div class="category-title">
+
+                                                <a href="{{ route('book',['product_name'=>'Game Of Thrones','cat'=>'Thriller']) }}" class="cat">Business Management</a>
+                                                <h5 class="title"><a href="{{ route('book',['product_name'=>'Game Of Thrones','cat'=>'Thriller']) }}">Dare to Lead</a></h5>
+
+                                            </div>
+
+                                            <!-- Price & Ratting -->
+
+                                        </div>
+
+                                    </div><!-- Product End -->
+                                </div>
+
+
+                            </div><!-- Product Slider End -->
+                        </div><!-- Product Slider Wrap End -->
+
+                    </div><!-- Tab Pane End -->
+                </div>
+            </div><!-- Product Tab Content End -->
+
+        </div>
+    </div>
+</div><!-- Feature Product Section End -->
+
 
 
     <div class="row">
@@ -583,7 +686,34 @@ a{
   </div>
  </div>
  <!-- end Library -->
+ <!-- about -->
+ <div class="about" id="about">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-10 offset-md-1">
+             <div class="aboutheading">
+                <h2>About <strong class="black">Us</strong></h2>
+                <span>adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</span>
+             </div>
+          </div>
+       </div>
+       <div class="row border">
+          <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
+             <div class="about-box">
+                <p> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                <a href="#">Read More</a>
+             </div>
+          </div>
+          <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+             <div class="about-box">
+                <figure><img src="images/about.png" alt="img" /></figure>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
 
+ <!-- end about -->
  <!-- Contact -->
  <div class="Contact" id="Contact">
     <div class="container">
@@ -618,6 +748,7 @@ a{
     </div>
  </div>
  <!-- end Contact -->
+
  <!-- footer -->
  <footer>
     <div class="footer">
