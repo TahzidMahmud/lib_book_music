@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Book;
+use App\Music;
 
 class HomeController extends Controller
 {
@@ -45,9 +46,24 @@ class HomeController extends Controller
             'genre'=>$request->genre,
             'title'=>$request->title,
             'description'=>$request->description,
-            'path'=>public_path('pdfs').'/'.$pdf_fileName,
-            'image'=>public_path('images').'/'.$image_fileName
+            'path'=>$pdf_fileName,
+            'image'=>$image_fileName
         ]);
         return back()->with(['message'=>'Book Added To the Collection Successfully..!!','stat'=>'success']);
+    }
+    public function add_music(){
+        return view('music.create');
+    }
+    public function store_music(Request $request){
+// dd($request);
+        $image_fileName = time().'.'.$request->image->extension();
+        $request->image->move(public_path('images'), $image_fileName);
+        Music::create([
+            'title'=>$request->title,
+            'description'=>$request->description,
+            'thumb'=>$image_fileName,
+            'link'=>$request->link
+        ]);
+        return back()->with(['message'=>'Music Added To the Collection Successfully..!!','stat'=>'success']);
     }
 }

@@ -39,7 +39,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" style="background-image: linear-gradient(180deg, #00b09b,  #96c93d)!important;" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin.dashboard') }}">
         <div class="sidebar-brand-icon">
           <i class="fas fa-user"></i>
         </div>
@@ -51,7 +51,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="{{ route('admin.dashboard') }}">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
