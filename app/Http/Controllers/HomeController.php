@@ -72,4 +72,8 @@ class HomeController extends Controller
         ]);
         return back()->with(['message'=>'Music Added To the Collection Successfully..!!','stat'=>'success']);
     }
+    public function book_delete(Request $request){
+        $book=Book::findOrFail($request->book_id)->delete();
+        return back()->with(['message'=>'Deleted Successfully..!!','stat'=>'danger']);
+    }
 }

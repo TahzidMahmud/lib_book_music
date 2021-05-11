@@ -39,6 +39,7 @@ Route::middleware(['verified','admin'])->group( function () {
     Route::get('/create-music','HomeController@add_music')->name('admin.addmusic');
     Route::post('/store-music','HomeController@store_music')->name('admin.storemusic');
     Route::get('/books','HomeController@books')->name('admin.books');
+    Route::post('/book-delete','HomeController@book_delete')->name('book.delete');
 
 
 });

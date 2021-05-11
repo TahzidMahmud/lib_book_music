@@ -5,10 +5,10 @@
     <table class="table">
         <thead>
           <tr>
-            <th scope="col">Cover</th>
-            <th scope="col">Title</th>
-            <th scope="col">File</th>
-            <th scope="col">Action</th>
+             <th class="text-center" scope="col">Cover</th>
+             <th class="text-center" scope="col">Title</th>
+             <th class="text-center" scope="col">File</th>
+             <th class="text-center" scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -18,9 +18,16 @@
                 <td>{{ $book->title }}</td>
                 <td>{{ $book->title.'pdf' }}</td>
                 <td>
-                  <button class="btn btn-danger">Delete</button>
-                  <button class="btn btn-warning">Edit</button>
+                  <div class="d-flex justify-content-around">
 
+
+                  <form action="{{ route('book.delete') }}" method="post">
+                    @csrf
+                    <input type="hidden" name="book_id" value="{{ $book->id }}">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                  </form>
+                  <button class="btn btn-warning">Edit</button>
+                </div>
                 </td>
               </tr>
 
