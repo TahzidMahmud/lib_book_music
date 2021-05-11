@@ -27,8 +27,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    public function books(){
+        $books=Book::all();
+        return view('book.booklist',compact('books'));
+    }
     public function dashboard(){
-        return view('admin.admindash');
+        $book_count=Book::all()->count();
+        $music_count=Music::all()->count();
+        return view('admin.admindash',compact('book_count','music_count'));
     }
     public function add_book(){
         $genres=[
