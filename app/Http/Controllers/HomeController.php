@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Book;
 use App\Music;
+use File;
 
 class HomeController extends Controller
 {
@@ -30,6 +31,10 @@ class HomeController extends Controller
     public function books(){
         $books=Book::all();
         return view('book.booklist',compact('books'));
+    }
+    public function musics(){
+        $musics=Music::all();
+        return view('music.musiclist',compact('musics'));
     }
     public function dashboard(){
         $book_count=Book::all()->count();
@@ -64,16 +69,38 @@ class HomeController extends Controller
 // dd($request);
         $image_fileName = time().'.'.$request->image->extension();
         $request->image->move(public_path('images'), $image_fileName);
+        $link=str_replace("watch","embed",$request->link);
+
         Music::create([
             'title'=>$request->title,
             'description'=>$request->description,
             'thumb'=>$image_fileName,
-            'link'=>$request->link
+            'link'=>$link
         ]);
         return back()->with(['message'=>'Music Added To the Collection Successfully..!!','stat'=>'success']);
     }
     public function book_delete(Request $request){
-        $book=Book::findOrFail($request->book_id)->delete();
+        $book=Book::findOrFail($request->book_id);
+// dd(public_path().'/pdfs'.'/'.$book->path);
+        if (File::exists(public_path().'/pdfs'.'/'.$book->path)) {
+            File::delete(public_path().'/pdfs'.'/'.$book->path);
+            // unlink(public_path().'/pdfs'.'/'.$book->path);
+        }if(File::exists(public_path().'/images'.'/'.$book->image)){
+            File::delete(public_path().'/images'.'/'.$book->image);
+            // unlink(public_path().'/images'.'/'.$book->image);
+
+        }
+        $book->delete();
         return back()->with(['message'=>'Deleted Successfully..!!','stat'=>'danger']);
+    }
+    public function music_delete(Request $request){
+        $music=Music::findOrFail($request->music_id);
+        if(File::exists(public_path().'/images'.'/'.$music->thumb)){
+            File::delete(public_path().'/images'.'/'.$music->thumb);
+            // unlink(public_path().'/images'.'/'.$book->image);
+        }
+        $music->delete();
+        return back()->with(['message'=>'Deleted Successfully..!!','stat'=>'danger']);
+
     }
 }
