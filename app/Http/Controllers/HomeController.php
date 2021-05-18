@@ -14,10 +14,15 @@ class HomeController extends Controller
      *
      * @return void
      */
+    public $genres;
     public function __construct()
     {
+        $this->genres=[
+            "Action and adventure","Art/architecture","Alternate history","Autobiography","Anthology","Biography","Chick lit","Business/economics","Children's","Crafts/hobbies","Classic","Cookbook","Comic book","Diary","Coming-of-age","Dictionary","Crime","Encyclopedia","Drama","Guide","Fairytale","Health/fitness","Fantasy","History","Graphic novel","Home and garden","Historical fiction","Humor","Horror","Journal","Mystery","Math","Paranormal romance","Memoir","Picture book","Philosophy","Poetry","Prayer","Political thriller","Religion", "spirituality" ,"new age","Romance","Textbook","Satire","True crime","Science fiction","Review","Short story","Science","Suspense","Self help","Thriller","Sports and leisure","Western","Travel","Young adult","True crime"
+        ];
         $this->middleware('auth');
     }
+
 
     /**
      * Show the application dashboard.
@@ -42,9 +47,8 @@ class HomeController extends Controller
         return view('admin.admindash',compact('book_count','music_count'));
     }
     public function add_book(){
-        $genres=[
-            "Action and adventure","Art/architecture","Alternate history","Autobiography","Anthology","Biography","Chick lit","Business/economics","Children's","Crafts/hobbies","Classic","Cookbook","Comic book","Diary","Coming-of-age","Dictionary","Crime","Encyclopedia","Drama","Guide","Fairytale","Health/fitness","Fantasy","History","Graphic novel","Home and garden","Historical fiction","Humor","Horror","Journal","Mystery","Math","Paranormal romance","Memoir","Picture book","Philosophy","Poetry","Prayer","Political thriller","Religion", "spirituality" ,"new age","Romance","Textbook","Satire","True crime","Science fiction","Review","Short story","Science","Suspense","Self help","Thriller","Sports and leisure","Western","Travel","Young adult","True crime"
-        ];
+        $genres=$this->genres;
+
         return view('book.create',compact('genres'));
     }
     public function store_book(Request $request){
@@ -101,6 +105,35 @@ class HomeController extends Controller
         }
         $music->delete();
         return back()->with(['message'=>'Deleted Successfully..!!','stat'=>'danger']);
+
+    }
+    public function book_edit(Book $book){
+        $genres=$this->genres;
+        return view('book.edit',compact('book','genres'));
+    }
+    public function update_book(Request $request){
+        $image_fileName="";
+        $book=Book::findOrFail($request->id);
+        if($request->image){
+            if(File::exists(public_path().'/images'.'/'.$book->image)){
+                File::delete(public_path().'/images'.'/'.$book->image);
+                $image_fileName = time().'.'.$request->image->extension();
+                $request->image->move(public_path('images'), $image_fileName);
+            }
+            $book->update([
+                'genre'=>$request->genre,
+                'title'=>$request->title,
+                'description'=>$request->description,
+                'image'=>$image_fileName
+            ]);
+        }else{
+            $book->update([
+                'genre'=>$request->genre,
+                'title'=>$request->title,
+                'description'=>$request->description,
+            ]);
+        }
+        return back()->with(['message'=>'updated successfully..!!','stat'=>'success']);
 
     }
 }

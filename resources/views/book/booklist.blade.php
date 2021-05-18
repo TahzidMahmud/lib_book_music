@@ -26,7 +26,7 @@
                     <input type="hidden" name="book_id" value="{{ $book->id }}">
                     <button type="submit" class="btn btn-danger">Delete</button>
                   </form>
-                  <button class="btn btn-warning">Edit</button>
+                  <a  href="{{ route('admin.books.edit',$book->id) }}" class="btn btn-warning">Edit</a>
                 </div>
                 </td>
               </tr>
