@@ -136,4 +136,35 @@ class HomeController extends Controller
         return back()->with(['message'=>'updated successfully..!!','stat'=>'success']);
 
     }
+    public function update_music(Request $request){
+
+        $image_fileName="";
+
+        $music=Music::findOrFail($request->id);
+        $link=$request->link !=null?$request->link:$music->link;
+        if($request->image){
+            if(File::exists(public_path().'/images'.'/'.$music->thumb)){
+                File::delete(public_path().'/images'.'/'.$music->thumb);
+                $image_fileName = time().'.'.$request->image->extension();
+                $request->image->move(public_path('images'), $image_fileName);
+            }
+            $music->update([
+            'title'=>$request->title,
+            'description'=>$request->description,
+            'thumb'=>$image_fileName,
+            'link'=>$link
+            ]);
+        }else{
+            $music->update([
+                'title'=>$request->title,
+                'description'=>$request->description,
+                'link'=>$link
+            ]);
+        }
+        return back()->with(['message'=>'updated successfully..!!','stat'=>'success']);
+    }
+    public function music_edit(Music $music){
+        // dd($music);
+        return view('music.edit',compact('music'));
+    }
 }

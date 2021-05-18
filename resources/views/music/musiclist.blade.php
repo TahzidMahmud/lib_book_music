@@ -27,7 +27,7 @@
                     <input type="hidden" name="music_id" value="{{ $music->id }}">
                     <button type="submit" class="btn btn-danger">Delete</button>
                   </form>
-                  <button class="btn btn-warning">Edit</button>
+                  <a href="{{ route('admin.musics.edit',$music->id) }}" class="btn btn-warning">Edit</a>
                 </div>
                 </td>
               </tr>

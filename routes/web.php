@@ -39,12 +39,15 @@ Route::middleware(['verified','admin'])->group( function () {
     Route::post('/update-book','HomeController@update_book')->name('admin.updatebook');
     Route::get('/create-music','HomeController@add_music')->name('admin.addmusic');
     Route::post('/store-music','HomeController@store_music')->name('admin.storemusic');
+    Route::post('/update-music','HomeController@update_music')->name('admin.updatemusic');
+
     Route::get('/books','HomeController@books')->name('admin.books');
     Route::get('/books/{book}/edit','HomeController@book_edit')->name('admin.books.edit');
-
     Route::post('/book-delete','HomeController@book_delete')->name('book.delete');
     Route::get('/musics','HomeController@musics')->name('admin.musics');
     Route::post('/music-delete','HomeController@music_delete')->name('music.delete');
+    Route::get('/musics/{music}/edit','HomeController@music_edit')->name('admin.musics.edit');
+
 
 
 
