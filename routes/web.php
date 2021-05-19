@@ -29,7 +29,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/download',function(){
     return view('front-end.landing');
 })->middleware('auth')->name('download');
-
+Route::get('/logout', function () {
+    Auth::logout();
+    return redirect('/');
+});
 
 
 Route::middleware(['verified','admin'])->group( function () {
@@ -47,9 +50,4 @@ Route::middleware(['verified','admin'])->group( function () {
     Route::get('/musics','HomeController@musics')->name('admin.musics');
     Route::post('/music-delete','HomeController@music_delete')->name('music.delete');
     Route::get('/musics/{music}/edit','HomeController@music_edit')->name('admin.musics.edit');
-
-
-
-
-
 });
