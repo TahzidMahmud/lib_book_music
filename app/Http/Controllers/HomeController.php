@@ -34,7 +34,10 @@ class HomeController extends Controller
         return view('home');
     }
     public function landing(){
-    return view('front-end.landing');
+        $books=Book::all();
+        $musics=Music::all();
+        // dd($book);
+    return view('front-end.landing',compact('books','musics'));
 
     }
     public function books(){

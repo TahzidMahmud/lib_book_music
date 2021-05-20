@@ -155,7 +155,7 @@ a{
                             <div class="product-slider-wrap product-slider-arrow-one">
                                 <!-- Product Slider Start -->
                                 <div class="product-slider product-slider-4-full">
-
+                                    @foreach ($books as $book )
                                     <div class="col pb-20 pt-10">
                                         <!-- Product Start -->
                                         <div class="ee-product">
@@ -163,7 +163,7 @@ a{
                                             <!-- Image -->
                                             <div class="image">
 
-                                                <a href="{{ route('book',['product_name'=>'Game Of Thrones','cat'=>'Thriller']) }}" class="img"><img src="assets/images/product/product-1.jpg" alt="Product Image"></a>
+                                                <a href="{{ route('book',['product_name'=>$book->title,'cat'=>$book->genre]) }}" class="img"><img src="{{ asset('images'.'/'.$book->image) }}" style="height: 40vh;width:35vw;" alt="Product Image"></a>
 
                                                 <div class="wishlist-compare">
                                                     <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
@@ -180,8 +180,8 @@ a{
                                                 <!-- Category & Title -->
                                                 <div class="category-title">
 
-                                                    <a href="{{ route('book',['product_name'=>'Game Of Thrones','cat'=>'Thriller']) }}"  class="cat">Thriller</a>
-                                                    <h5 class="title"><a href="{{ route('book',['product_name'=>'Game Of Thrones','cat'=>'Thriller']) }}" >Game Of Thrones</a></h5>
+                                                    <a href="{{ route('book',['product_name'=>$book->title,'cat'=>$book->genre]) }}" class="cat">{{ $book->genre }}</a>
+                                                    <h5 class="title"><a href="{{ route('book',['product_name'=>$book->title,'cat'=>$book->genre]) }}">{{ $book->title }}</a></h5>
 
                                                 </div>
 
@@ -191,137 +191,8 @@ a{
 
                                         </div><!-- Product End -->
                                     </div>
+                                    @endforeach
 
-                                    <div class="col pb-20 pt-10">
-                                        <!-- Product Start -->
-                                        <div class="ee-product">
-
-                                            <!-- Image -->
-                                            <div class="image">
-
-
-                                                <a href="{{ route('book',['product_name'=>'Harry Potter and the Sorcerer Stone','cat'=>'Science Fiction & Fantasy']) }}" class="img"><img src="assets/images/product/product-1.jpg" alt="Product Image"></a>
-
-                                                <div class="wishlist-compare">
-                                                    <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
-                                                    <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a>
-                                                </div>
-
-
-
-                                            </div>
-
-                                            <!-- Content -->
-                                            <div class="content">
-
-                                                <!-- Category & Title -->
-                                                <div class="category-title">
-
-                                                    <a href="{{ route('book',['product_name'=>'Harry Potter and the Sorcerer Stone','cat'=>'Science Fiction & Fantasy']) }}" class="cat">Science Fiction & Fantasy</a>
-                                                    <h5 class="title"><a href="{{ route('book',['product_name'=>'Harry Potter and the Sorcerer Stone','cat'=>'Science Fiction & Fantasy']) }}">Harry Potter </a></h5>
-
-                                                </div>
-
-                                                <!-- Price & Ratting -->
-
-                                            </div>
-
-                                        </div><!-- Product End -->
-                                    </div>
-
-                                    <div class="col pb-20 pt-10">
-                                        <!-- Product Start -->
-                                        <div class="ee-product">
-
-                                            <!-- Image -->
-                                            <div class="image">
-
-                                                <a href="{{ route('book',['product_name'=>'The 48 Laws of Power','cat'=>'Business & Money']) }}" class="img"><img src="assets/images/product/product-1.jpg" alt="Product Image"></a>
-
-                                                <div class="wishlist-compare">
-                                                    <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
-                                                    <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a>
-                                                </div>
-
-
-
-                                            </div>
-
-                                            <!-- Content -->
-                                            <div class="content">
-
-                                                <!-- Category & Title -->
-                                                <div class="category-title">
-
-                                                    <a href="{{ route('book',['product_name'=>'The 48 Laws of Power','cat'=>'Business & Money']) }}"  class="cat">Business & Money</a>
-                                                    <h5 class="title"><a href="{{ route('book',['product_name'=>'The 48 Laws of Power','cat'=>'Business & Money']) }}" >The 48 Laws of Power</a></h5>
-
-                                                </div>
-
-                                                <!-- Price & Ratting -->
-
-
-                                            </div>
-
-                                        </div><!-- Product End -->
-                                    </div>
-
-                                    <div class="col pb-20 pt-10">
-                                        <!-- Product Start -->
-                                        <div class="ee-product">
-
-                                            <!-- Image -->
-                                            <div class="image">
-
-                                                <a href="{{ route('book',['product_name'=>'Dare to Lead','cat'=>'Business Management & Leadership']) }}" class="img"><img src="assets/images/product/product-1.jpg" alt="Product Image"></a>
-                                                <div class="wishlist-compare">
-                                                    <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
-                                                    <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a>
-                                                </div>
-
-
-
-                                            </div>
-
-                                            <!-- Content -->
-                                            <div class="content">
-
-                                                <!-- Category & Title -->
-                                                <div class="category-title">
-
-                                                    <a href="{{ route('book',['product_name'=>'Dare to Lead','cat'=>'Business Management & Leadership']) }}"  class="cat">Business Management</a>
-                                                    <h5 class="title"><a href="{{ route('book',['product_name'=>'Dare to Lead','cat'=>'Business Management & Leadership']) }}" >Dare to Lead</a></h5>
-
-                                                </div>
-
-                                                <!-- Price & Ratting -->
-
-                                            </div>
-
-                                        </div><!-- Product End -->
-                                    </div>
-
-                                    <div class="col pb-20 pt-10">
-                                        <!-- Product Start -->
-                                        <div class="ee-product">
-
-                                            <!-- Image -->
-                                            <div class="image">
-
-                                                <a href="single-product.html" class="img"><img src="assets/images/product/product-5.png" alt="Product Image"></a>
-
-                                                <div class="wishlist-compare">
-                                                    <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
-                                                    <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a>
-                                                </div>
-
-
-
-                                            </div>
-
-
-                                        </div><!-- Product End -->
-                                    </div>
 
                                 </div><!-- Product Slider End -->
                             </div><!-- Product Slider Wrap End -->
@@ -335,7 +206,7 @@ a{
                             <div class="product-slider-wrap product-slider-arrow-one">
                                 <!-- Product Slider Start -->
                                 <div class="product-slider product-slider-4-full">
-
+                                    @foreach ($books as $book )
                                     <div class="col pb-20 pt-10">
                                         <!-- Product Start -->
                                         <div class="ee-product">
@@ -343,7 +214,7 @@ a{
                                             <!-- Image -->
                                             <div class="image">
 
-                                                <a href="{{ route('book',['product_name'=>'Game Of Thrones','cat'=>'Thriller']) }}" class="img"><img src="assets/images/product/product-1.jpg" alt="Product Image"></a>
+                                                <a href="{{ route('book',['product_name'=>$book->title,'cat'=>$book->genre]) }}" class="img"><img src="{{ asset('images'.'/'.$book->image) }}" alt="Product Image"></a>
 
                                                 <div class="wishlist-compare">
                                                     <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
@@ -360,8 +231,8 @@ a{
                                                 <!-- Category & Title -->
                                                 <div class="category-title">
 
-                                                    <a href="{{ route('book',['product_name'=>'Game Of Thrones','cat'=>'Thriller']) }}" class="cat">Thriller</a>
-                                                    <h5 class="title"><a href="{{ route('book',['product_name'=>'Game Of Thrones','cat'=>'Thriller']) }}">Game Of Thrones</a></h5>
+                                                    <a href="{{ route('book',['product_name'=>$book->title,'cat'=>$book->genre]) }}" class="cat">{{ $book->genre }}</a>
+                                                    <h5 class="title"><a href="{{ route('book',['product_name'=>$book->title,'cat'=>$book->genre]) }}">{{ $book->title }}</a></h5>
 
                                                 </div>
 
@@ -371,115 +242,9 @@ a{
 
                                         </div><!-- Product End -->
                                     </div>
-
-                                    <div class="col pb-20 pt-10">
-                                        <!-- Product Start -->
-                                        <div class="ee-product">
-
-                                            <!-- Image -->
-                                            <div class="image">
+                                    @endforeach
 
 
-                                                <a href="{{ route('book',['product_name'=>'Harry Potter and the Sorcerer Stone','cat'=>'Science Fiction & Fantasy']) }}" class="img"><img src="assets/images/product/product-1.jpg" alt="Product Image"></a>
-
-                                                <div class="wishlist-compare">
-                                                    <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
-                                                    <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a>
-                                                </div>
-
-
-
-                                            </div>
-
-                                            <!-- Content -->
-                                            <div class="content">
-
-                                                <!-- Category & Title -->
-                                                <div class="category-title">
-
-                                                    <a href="{{ route('book',['product_name'=>'Game Of Thrones','cat'=>'Thriller']) }}" class="cat">Science Fiction & Fantasy</a>
-                                                    <h5 class="title"><a href="{{ route('book',['product_name'=>'Game Of Thrones','cat'=>'Thriller']) }}">Harry Potter </a></h5>
-
-                                                </div>
-
-                                                <!-- Price & Ratting -->
-
-                                            </div>
-
-                                        </div><!-- Product End -->
-                                    </div>
-
-                                    <div class="col pb-20 pt-10">
-                                        <!-- Product Start -->
-                                        <div class="ee-product">
-
-                                            <!-- Image -->
-                                            <div class="image">
-
-                                                <a href="{{ route('book',['product_name'=>'The 48 Laws of Power','cat'=>'Business & Money']) }}" class="img"><img src="assets/images/product/product-1.jpg" alt="Product Image"></a>
-
-                                                <div class="wishlist-compare">
-                                                    <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
-                                                    <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a>
-                                                </div>
-
-
-
-                                            </div>
-
-                                            <!-- Content -->
-                                            <div class="content">
-
-                                                <!-- Category & Title -->
-                                                <div class="category-title">
-
-                                                    <a href="{{ route('book',['product_name'=>'Game Of Thrones','cat'=>'Thriller']) }}" class="cat">Business & Money</a>
-                                                    <h5 class="title"><a href="{{ route('book',['product_name'=>'Game Of Thrones','cat'=>'Thriller']) }}">The 48 Laws of Power</a></h5>
-
-                                                </div>
-
-                                                <!-- Price & Ratting -->
-
-
-                                            </div>
-
-                                        </div><!-- Product End -->
-                                    </div>
-
-                                    <div class="col pb-20 pt-10">
-                                        <!-- Product Start -->
-                                        <div class="ee-product">
-
-                                            <!-- Image -->
-                                            <div class="image">
-
-                                                <a href="{{ route('book',['product_name'=>'Dare to Lead','cat'=>'Business Management & Leadership']) }}" class="img"><img src="assets/images/product/product-1.jpg" alt="Product Image"></a>
-                                                <div class="wishlist-compare">
-                                                    <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
-                                                    <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a>
-                                                </div>
-
-
-
-                                            </div>
-
-                                            <!-- Content -->
-                                            <div class="content">
-
-                                                <!-- Category & Title -->
-                                                <div class="category-title">
-
-                                                    <a href="{{ route('book',['product_name'=>'Game Of Thrones','cat'=>'Thriller']) }}" class="cat">Business Management</a>
-                                                    <h5 class="title"><a href="{{ route('book',['product_name'=>'Game Of Thrones','cat'=>'Thriller']) }}">Dare to Lead</a></h5>
-
-                                                </div>
-
-                                                <!-- Price & Ratting -->
-
-                                            </div>
-
-                                        </div><!-- Product End -->
-                                    </div>
                                 </div><!-- Product Slider End -->
                             </div><!-- Product Slider Wrap End -->
 

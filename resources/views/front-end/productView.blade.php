@@ -21,7 +21,7 @@
 
                              {{-- product images --}}
                         <div id="single-image-0" class="tab-pane fade show active big-image-slider">
-                            <div class="big-image"><img src={{ asset("assets/images/product/product-1.jpg" ) }} alt="Big Image"><a href={{ asset("assets/images/product/product-1.jpg" ) }}  class="big-image-popup"><i class="fa fa-search-plus"></i></a></div>
+                            <div class="big-image"><img src="{{ asset('images'.'/'.$book->image) }}" alt="Big Image"><a href="{{ asset('images'.'/'.$book->image) }}"  class="big-image-popup"><i class="fa fa-search-plus"></i></a></div>
                         </div>
 
 
