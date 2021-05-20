@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', function () {
-    return view('front-end.landing');
-});
+
+Route::get('/','HomeController@landing')->name('landing');
+
 Route::get('/books', function () {
     return view('front-end.productsView');
 })->name('books');
