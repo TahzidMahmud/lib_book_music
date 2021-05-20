@@ -78,8 +78,12 @@ class HomeController extends Controller
     }
     public function store_music(Request $request){
 // dd($request);
-        $image_fileName = time().'.'.$request->image->extension();
-        $request->image->move(public_path('images'), $image_fileName);
+        $image_fileName=null;
+        if($request->image){
+            $image_fileName = time().'.'.$request->image->extension();
+            $request->image->move(public_path('images'), $image_fileName);
+        }
+
         $link=str_replace("watch","embed",$request->link);
 
         Music::create([

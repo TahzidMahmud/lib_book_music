@@ -82,7 +82,7 @@
 
                              <div class="wishlist-compare">
                                  {{-- <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a> --}}
-                                     <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a>
+                                     {{-- <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a> --}}
                              </div>
 
 
@@ -107,7 +107,7 @@
 
                         </div>
 
-                        <div class="share">
+                        {{-- <div class="share">
 
                             <h5>Share: </h5>
                             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -115,7 +115,7 @@
                             <a href="#"><i class="fa fa-instagram"></i></a>
                             <a href="#"><i class="fa fa-google-plus"></i></a>
 
-                        </div>
+                        </div> --}}
 
                     </div>
 

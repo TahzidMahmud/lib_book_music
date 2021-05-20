@@ -14,7 +14,13 @@
         <tbody>
             @forelse ($musics as $music )
             <tr>
-                <td scope="row"><img style="height: 10vh;width:10vw;" src="{{ asset('images'.'/'.$music->thumb) }}" alt="cover photo"></td>
+                <td scope="row">
+                    @if($music->thumb)
+                    <img style="height: 10vh;width:10vw;" src="{{ asset('images'.'/'.$music->thumb) }}" alt="cover photo">
+                    @else
+                    <img style="height: 10vh;width:10vw;" src="{{ asset('images/thump.jpg') }}" alt="cover photo">
+                    @endif
+                </td>
                 <td>{{ $music->title }}</td>
                 <td style="height: 10vh!important;width:10vw!important;">{!! $music->link !!}</td>
 
