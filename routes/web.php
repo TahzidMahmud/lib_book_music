@@ -44,7 +44,7 @@ Route::middleware(['verified','admin'])->group( function () {
     Route::post('/store-music','HomeController@store_music')->name('admin.storemusic');
     Route::post('/update-music','HomeController@update_music')->name('admin.updatemusic');
 
-    Route::get('/books','HomeController@books')->name('admin.books');
+    Route::get('/admin-books','HomeController@books')->name('admin.books');
     Route::get('/books/{book}/edit','HomeController@book_edit')->name('admin.books.edit');
     Route::post('/book-delete','HomeController@book_delete')->name('book.delete');
     Route::get('/musics','HomeController@musics')->name('admin.musics');
