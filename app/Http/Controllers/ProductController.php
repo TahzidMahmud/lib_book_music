@@ -12,7 +12,7 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($product_name,$cat)
+    public function index(Book $book)
     {
 
 

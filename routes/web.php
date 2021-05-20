@@ -23,7 +23,7 @@ Route::get('/','HomeController@landing')->name('landing');
 Route::get('/books', function () {
     return view('front-end.productsView');
 })->name('books');
-Route::get('/books-single/{product_name}/{cat}', 'ProductController@index')->name('book');
+Route::get('/books/{book}', 'BookController@show')->name('book');
 Auth::routes(['verify'=>true]);
 
 Route::get('/home', 'HomeController@index')->name('home');

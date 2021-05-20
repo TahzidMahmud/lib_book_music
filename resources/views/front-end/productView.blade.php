@@ -10,6 +10,8 @@
                 <h1 >{{ Session::get('message') }}</h1>
             </div>
         @endif
+<br><br>
+
         <div class="row mb-90">
 
             <div class="col-lg-6 col-12 mb-50">
@@ -18,7 +20,6 @@
                 <div class="single-product-image thumb-right">
 
                     <div class="tab-content">
-
                              {{-- product images --}}
                         <div id="single-image-0" class="tab-pane fade show active big-image-slider">
                             <div class="big-image"><img src="{{ asset('images'.'/'.$book->image) }}" alt="Big Image"><a href="{{ asset('images'.'/'.$book->image) }}"  class="big-image-popup"><i class="fa fa-search-plus"></i></a></div>
@@ -30,7 +31,7 @@
                     <div class="thumb-image-slider nav" data-vertical="true">
 
 
-                        <a class="thumb-image active" data-toggle="tab" href="#single-image-0"><img src={{ asset("assets/images/product/product-1.jpg" ) }} alt="Thumbnail Image"></a>
+                        <a class="thumb-image active" data-toggle="tab" href="#single-image-0"><img src={{ asset('images'.'/'.$book->image) }} alt="Thumbnail Image"></a>
 
 
 
@@ -50,8 +51,8 @@
                     <div class="head-content">
 
                         <div class="category-title">
-                            <a href="#" class="cat">{{ $cat }}</a>
-                            <h5 class="title">{{ $product_name }}</h5>
+                            <a href="#" class="cat">{{ $book->genre }}</a>
+                            <h5 class="title">{{ $book->title }}</h5>
                         </div>
 
 
@@ -59,38 +60,25 @@
 
                     <div class="single-product-description">
 
-                        <div class="ratting">
+                        {{-- <div class="ratting">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                        </div>
+                        </div> --}}
 
                         <div class="desc">
-                            <p>this is a book of {{ $cat }} and one of the best sellers </p>
+                            <p>this is a book of {{ $book->genre }} and one of the best sellers </p>
                         </div>
 
-                        <span class="availability">Availability:
-                           <span>In Stock</span>
 
-                        </span>
-
-                        <div class="quantity-colors">
-
-                            <div class="quantity">
-                                <h5>Quantity</h5>
-                                <div class="pro-qty"><input type="text" value="1"></div>
-                            </div>
-
-
-
-                        </div>
 
                         <div class="actions">
 
 
                             <a href={{ route('download') }}><button class="btn ml-2" style="color:black;background-color:rgb(255, 208, 0);">Download</button></a>
+                            <a href="#"><button onclick="read()" class="btn ml-2" id="read-btn" style="color:rgb(255, 255, 255);background-color:rgb(197, 11, 11);">Read Now</button></a>
 
                              <div class="wishlist-compare">
                                  {{-- <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a> --}}
@@ -138,8 +126,12 @@
         </div>
 
         <div class="row">
-
+            {{-- <iframe id="iframepdf" style="display: none;" src="{{ asset('pdfs'.'/'.$book->path) }}" width="100%" height="900px"></iframe> --}}
+            <object id="iframepdf" data="{{ asset('pdfs'.'/'.$book->path) }}" type="application/pdf" width="100%" height="800px">
+                <embed src="{{ asset('pdfs'.'/'.$book->path) }}" type="application/pdf" width="100%" height="800px"/>
+            </object>
         </div>
+        <br><br><br>
 
     </div>
 </div><!-- Single Product Section End -->

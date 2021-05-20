@@ -94,7 +94,11 @@ a{
 <!-- Main JS -->
 <script src={{ asset("js/main.js") }}></script>
 
-
+<script>
+     function read(){
+                    document.getElementById("iframepdf").style.display="block";
+                }
+</script>
 
 
 
