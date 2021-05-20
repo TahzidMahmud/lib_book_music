@@ -326,7 +326,7 @@
                       }
                 }
                 function cross(){
-
+                document.getElementById("coverimage").value="";
                 const cross = document.querySelector("#crossbutton");
                 cross.style="display:none;"
                 const preview = document.querySelector("#selectedimage");

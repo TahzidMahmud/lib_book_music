@@ -163,7 +163,7 @@ a{
                                             <!-- Image -->
                                             <div class="image">
 
-                                                <a href="{{ route('book',['product_name'=>$book->title,'cat'=>$book->genre]) }}" class="img"><img src="{{ asset('images'.'/'.$book->image) }}" style="height: 40vh;width:35vw;" alt="Product Image"></a>
+                                                <a href="{{ route('book',['product_name'=>$book->title,'cat'=>$book->genre]) }}" class="img"><img src="{{ asset('images'.'/'.$book->image) }}" style="height: 40vh;width:30vw;" alt="Product Image"></a>
 
                                                 <div class="wishlist-compare">
                                                     <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
