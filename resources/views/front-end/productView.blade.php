@@ -77,7 +77,7 @@
                         <div class="actions">
 
 
-                            <a href={{ route('download') }}><button class="btn ml-2" style="color:black;background-color:rgb(255, 208, 0);">Download</button></a>
+                            <a href={{ route('download',$book->id)}}><button class="btn ml-2" style="color:black;background-color:rgb(255, 208, 0);">Download</button></a>
                             <a href="#"><button onclick="read()" class="btn ml-2" id="read-btn" style="color:rgb(255, 255, 255);background-color:rgb(197, 11, 11);">Read Now</button></a>
 
                              <div class="wishlist-compare">
@@ -127,7 +127,7 @@
 
         <div class="row">
             {{-- <iframe id="iframepdf" style="display: none;" src="{{ asset('pdfs'.'/'.$book->path) }}" width="100%" height="900px"></iframe> --}}
-            <object id="iframepdf" data="{{ asset('pdfs'.'/'.$book->path) }}" type="application/pdf" width="100%" height="800px">
+            <object id="iframepdf" data="{{ asset('pdfs'.'/'.$book->path) }}" style="display: none;" type="application/pdf" width="100%" height="800px">
                 <embed src="{{ asset('pdfs'.'/'.$book->path) }}" type="application/pdf" width="100%" height="800px"/>
             </object>
         </div>

@@ -49,6 +49,22 @@ class BookController extends Controller
         return view('front-end.productView',compact('book'));
 
     }
+    public function download(Book $book){
+        // dd($book);
+        $filename="";
+        $file_path = public_path().'/pdfs/'.$book->path;
+        $headers = array(
+            'Content-Type: application/pdf',
+            'Content-Disposition: attachment; filename='.$book->title,
+        );
+        if ( file_exists( $file_path ) ) {
+            // Send Download
+            return \Response::download( $file_path, $filename, $headers );
+        } else {
+            // Error
+            exit( 'Requested file does not exist on our server!' );
+        }
+    }
 
     /**
      * Show the form for editing the specified resource.
