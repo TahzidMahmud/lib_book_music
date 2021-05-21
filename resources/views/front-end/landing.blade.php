@@ -263,7 +263,7 @@ a{
         </div>
      <div  class="btn col-md-2 col-sm-12 col-2" style="background-color:#81256c;color:white;">
         <div class=""  style="z-index:100; ">
-           <a style="z-index:100;color:white;" href={{ url('/books') }} >Read More</a>
+           <a style="z-index:100;color:white;" href={{ url('/books/8/index') }} >Read More</a>
         </div>
      </div>
   </div>
@@ -355,7 +355,7 @@ a{
         </div>
      <div  class="btn col-md-2 col-sm-12 col-2" style="background-color:#81256c;color:white;">
         <div class=""  style="z-index:100; ">
-           <a style="z-index:100;color:white;" href={{ url('/books') }} > Explore</a>
+           <a style="z-index:100;color:white;" href={{ url('/musics/8/index') }} > Explore</a>
         </div>
      </div>
   </div>

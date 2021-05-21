@@ -20,9 +20,9 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/','HomeController@landing')->name('landing');
 
-Route::get('/books', function () {
-    return view('front-end.productsView');
-})->name('books');
+Route::get('/books/{qty}/index', 'BookController@index')->name('books');
+Route::get('/musics/{qty}/index', 'MusicController@index')->name('musics');
+
 Auth::routes(['verify'=>true]);
 
 Route::get('/home', 'HomeController@index')->name('home');

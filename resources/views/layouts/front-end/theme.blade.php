@@ -56,8 +56,8 @@ a{
                           <ul class="menu-area-main" style="background-color:transparent !important;">
                             <li style="background-color:transparent !important;"> <a href="{{ url('/')}}">Home</a> </li>
                             <li style="background-color:transparent !important;"> <a href="#about">About us</a> </li>
-                            <li style="background-color:transparent !important;"><a href="{{ url('/books')}}">Our Books</a></li>
-                            <li style="background-color:transparent !important;"><a href="{{ url('/')}}">Music</a></li>
+                            <li style="background-color:transparent !important;"><a href={{ url('/books/8/index') }}>Our Books</a></li>
+                            <li style="background-color:transparent !important;"><a href={{ url('/musics/8/index') }} >Music</a></li>
                             <li style="background-color:transparent !important;"><a href="#Contact">Contact us</a></li>
                             <li style="background-color:transparent !important;" class="mean-last"> <a href="#"><img src={{asset("images/search_icon.png")}} alt="#" /></a> </li>
                             <li style="background-color:transparent !important;" class="mean-last"> <a href="#"><img src={{asset("images/top-icon.png")}} alt="#" /></a> </li>

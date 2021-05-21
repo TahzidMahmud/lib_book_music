@@ -12,9 +12,11 @@ class MusicController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($qty)
     {
-        //
+        $musics=Music::paginate($qty);
+        return view('front-end.musicsView',compact('musics'));
+
     }
 
     /**

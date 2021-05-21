@@ -12,9 +12,11 @@ class BookController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($qty)
     {
-        //
+        $books=Book::paginate($qty);
+        return view('front-end.productsView',compact('books'));
+
     }
 
     /**

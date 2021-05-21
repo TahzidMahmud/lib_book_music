@@ -92,7 +92,7 @@
 
                             <!-- Section Title Start -->
                             <div class="col-12 mb-40 mt-4">
-                                <div class="section-title-one" data-title="All BOOKS"><h1>All BOOKS</h1></div>
+                                <div class="section-title-one" data-title="All Musics"><h1>All Musics</h1></div>
                             </div><!-- Section Title End -->
 
                             <!-- Product Tab Filter Start -->
@@ -118,7 +118,7 @@
                                         <div class="">
                                             <!-- Product Slider Start -->
                                             <div class="product-slider product-slider-4">
-                                                @foreach ($books as $book )
+                                                @foreach ($musics as $music )
                                                 <div class="col pb-20 pt-10">
                                                     <!-- Product Start -->
                                                     <div class="ee-product">
@@ -126,9 +126,18 @@
                                                         <!-- Image -->
                                                         <div class="image">
 
-                                                            <a href="{{ route('book',$book->id) }}" class="img"><img src="{{ asset('images'.'/'.$book->image) }}" style="height: 40vh;width:30vw;" alt="Product Image"></a>
+                                                            <a href="{{ route('music',$music->id) }}" class="img">
+                                                                @if($music->thumb)
+                                                                <img src="{{ asset('images'.'/'.$music->thumb) }}" alt="Product Image">
+                                                                @else
+                                                                <img src="{{ asset('images/thump.jpg') }}" alt="Product Image">
+                                                                @endif
+                                                            </a>
 
-
+                                                            {{-- <div class="wishlist-compare">
+                                                                <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
+                                                                <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a>
+                                                            </div> --}}
 
 
 
@@ -140,9 +149,8 @@
                                                             <!-- Category & Title -->
                                                             <div class="category-title">
 
-                                                                <a href="{{ route('book',$book->id) }}" class="cat">{{ $book->genre }}</a>
-                                                                <h5 class="title"><a href="{{ route('book',$book->id) }}">{{ $book->title }}</a></h5>
-
+                                                                <a href="{{ route('music',$music->id) }}" class="cat"></a>
+                                                                <h5 class="title"><a href="{{ route('music',$music->id) }}">{{ $music->title }}</a></h5>
 
                                                             </div>
 
@@ -152,9 +160,9 @@
 
                                                     </div><!-- Product End -->
                                                 </div>
-
                                                 @endforeach
-                                                {{ $books->links() }}
+
+                                                {{ $musics->links() }}
 
 
                                             </div><!-- Product Slider End -->
@@ -169,7 +177,7 @@
                                         <div class="product-slider-wrap product-slider-arrow-one">
                                             <!-- Product Slider Start -->
                                             <div class="product-slider product-slider-4">
-                                                @foreach ($books as $book )
+                                                @foreach ($musics as $music )
                                                 <div class="col pb-20 pt-10">
                                                     <!-- Product Start -->
                                                     <div class="ee-product">
@@ -177,12 +185,18 @@
                                                         <!-- Image -->
                                                         <div class="image">
 
-                                                            <a href="{{ route('book',$book->id) }}" class="img"><img src="{{ asset('images'.'/'.$book->image) }}" style="height: 40vh;width:30vw;" alt="Product Image"></a>
+                                                            <a href="{{ route('music',$music->id) }}" class="img">
+                                                                @if($music->thumb)
+                                                                <img src="{{ asset('images'.'/'.$music->thumb) }}" alt="Product Image">
+                                                                @else
+                                                                <img src="{{ asset('images/thump.jpg') }}" alt="Product Image">
+                                                                @endif
+                                                            </a>
 
-                                                            <div class="wishlist-compare">
+                                                            {{-- <div class="wishlist-compare">
                                                                 <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
                                                                 <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a>
-                                                            </div>
+                                                            </div> --}}
 
 
 
@@ -194,9 +208,8 @@
                                                             <!-- Category & Title -->
                                                             <div class="category-title">
 
-                                                                <a href="{{ route('book',$book->id) }}" class="cat">{{ $book->genre }}</a>
-                                                                <h5 class="title"><a href="{{ route('book',$book->id) }}">{{ $book->title }}</a></h5>
-
+                                                                <a href="{{ route('music',$music->id) }}" class="cat"></a>
+                                                                <h5 class="title"><a href="{{ route('music',$music->id) }}">{{ $music->title }}</a></h5>
 
                                                             </div>
 
@@ -206,8 +219,8 @@
 
                                                     </div><!-- Product End -->
                                                 </div>
-
                                                 @endforeach
+
 
 
 
