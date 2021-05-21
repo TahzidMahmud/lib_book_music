@@ -1,51 +1,6 @@
 @extends('layouts.front-end.theme')
 @section( 'section')
 
-<style>
-a{
-    background-color:transparent !important;
-}
-</style>
-<!-- Feature Product Section Start -->
-<header>
-    <!-- header inner -->
-    <div class="header" style="background-color:rgba(0,0,0,0.2);">
-       <div class="container" style="background-color:transparent !important">
-          <div class="row" style="background-color:transparent !important">
-             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section" style="background-color:transparent !important">
-                <div class="full" style="background-color:transparent !important">
-
-                </div>
-             </div>
-             <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9" style="background-color:transparent !important">
-                <div class="menu-area" style="background-color:transparent !important">
-                   <div class="limit-box" style="background-color:transparent !important">
-                      <nav class="main-menu" style="background-color:transparent !important">
-                         <ul class="menu-area-main" style="background-color:transparent !important">
-                            <li style="background-color:transparent !important"> <a href="{{ url('/')}}">Home</a> </li>
-                            <li style="background-color:transparent !important"> <a href="#about">About us</a> </li>
-                            <li style="background-color:transparent !important"><a href={{ url('/books/8/index') }}>Our Books</a></li>
-                            <li style="background-color:transparent !important"><a href="{{ url('/musics/8/index') }}">Music</a></li>
-                            <li style="background-color:transparent !important"><a href="#Contact">Contact us</a></li>
-                            <li style="background-color:transparent !important" class="mean-last"> <a href="#"><img src="images/search_icon.png" alt="#" /></a> </li>
-                            <li style="background-color:transparent !important" class="mean-last"> <a href="{{ route('admin.dashboard') }}"><img src="images/top-icon.png" alt="#" /></a> </li>
-                         </ul>
-                      </nav>
-                   </div>
-                </div>
-             </div>
-          </div>
-       </div>
-    </div>
-
-    <!-- end header inner -->
- </header>
-
-
-
-
-   <!-- header -->
-
  <!-- end header -->
  <section class="slider_section">
     <div id="myCarousel" class="carousel slide banner-main" data-ride="carousel">
@@ -165,10 +120,6 @@ a{
 
                                                 <a href="{{ route('book',$book->id) }}" class="img"><img src="{{ asset('images'.'/'.$book->image) }}" style="height: 40vh;width:30vw;" alt="Product Image"></a>
 
-                                                <div class="wishlist-compare">
-                                                    <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
-                                                    <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a>
-                                                </div>
 
 
 

@@ -59,8 +59,13 @@ a{
                             <li style="background-color:transparent !important;"><a href={{ url('/books/8/index') }}>Our Books</a></li>
                             <li style="background-color:transparent !important;"><a href={{ url('/musics/8/index') }} >Music</a></li>
                             <li style="background-color:transparent !important;"><a href="#Contact">Contact us</a></li>
-                            <li style="background-color:transparent !important;" class="mean-last"> <a href="#"><img src={{asset("images/search_icon.png")}} alt="#" /></a> </li>
-                            <li style="background-color:transparent !important;" class="mean-last"> <a href="#"><img src={{asset("images/top-icon.png")}} alt="#" /></a> </li>
+                            {{-- <li style="background-color:transparent !important;" class="mean-last"> <a href="#"><img src={{asset("images/search_icon.png")}} alt="#" /></a> </li> --}}
+                            @auth
+                                @if(auth()->user()->email == "admin@admin.com")
+                                <li style="background-color:transparent !important;" class="mean-last"> <a href="#"><img src={{asset("images/top-icon.png")}} alt="#" /></a> </li>
+                                @endif
+                            @endauth
+
                          </ul>
                           </nav>
                        </div>
