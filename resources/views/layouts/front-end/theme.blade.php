@@ -62,7 +62,7 @@ a{
                             {{-- <li style="background-color:transparent !important;" class="mean-last"> <a href="#"><img src={{asset("images/search_icon.png")}} alt="#" /></a> </li> --}}
                             @auth
                                 @if(auth()->user()->email == "admin@admin.com")
-                                <li style="background-color:transparent !important;" class="mean-last"> <a href="#"><img src={{asset("images/top-icon.png")}} alt="#" /></a> </li>
+                                <li style="background-color:transparent !important;" class="mean-last"> <a  href={{ route('admin.dashboard') }}><img src={{asset("images/top-icon.png")}} alt="#" /></a> </li>
                                 @endif
                             @endauth
 
