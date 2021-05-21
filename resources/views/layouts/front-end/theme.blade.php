@@ -76,7 +76,17 @@ a{
 
 
 
+<style>
 
+    .sideframes > iframe{
+        height: 30vh!important;
+        width: 26vw!important;
+    }
+    .mainframe > iframe{
+        height: 80vh!important;
+        width: 100%!important;
+    }
+</style>
 
 
 <!-- JS

@@ -46,7 +46,8 @@ class MusicController extends Controller
      */
     public function show(Music $music)
     {
-        //
+        $musics=Music::all();
+        return view('front-end.musicView',compact('music','musics'));
     }
 
     /**

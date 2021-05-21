@@ -292,6 +292,7 @@ a{
                             <!-- Product Slider Start -->
                             <div class="product-slider product-slider-4-full">
 
+                                @foreach ($musics as $music )
                                 <div class="col pb-20 pt-10">
                                     <!-- Product Start -->
                                     <div class="ee-product">
@@ -299,12 +300,18 @@ a{
                                         <!-- Image -->
                                         <div class="image">
 
-                                            <a href="{{ route('book',$book->id) }}" class="img"><img src="assets/images/product/product-1.jpg" alt="Product Image"></a>
+                                            <a href="{{ route('music',$music->id) }}" class="img">
+                                                @if($music->thumb)
+                                                <img src="{{ asset('images'.'/'.$music->thumb) }}" alt="Product Image">
+                                                @else
+                                                <img src="{{ asset('images/thump.jpg') }}" alt="Product Image">
+                                                @endif
+                                            </a>
 
-                                            <div class="wishlist-compare">
+                                            {{-- <div class="wishlist-compare">
                                                 <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
                                                 <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a>
-                                            </div>
+                                            </div> --}}
 
 
 
@@ -316,8 +323,8 @@ a{
                                             <!-- Category & Title -->
                                             <div class="category-title">
 
-                                                <a href="{{ route('book',$book->id) }}" class="cat">Thriller</a>
-                                                <h5 class="title"><a href="{{ route('book',$book->id) }}">Game Of Thrones</a></h5>
+                                                <a href="{{ route('music',$music->id) }}" class="cat"></a>
+                                                <h5 class="title"><a href="{{ route('music',$music->id) }}">{{ $music->title }}</a></h5>
 
                                             </div>
 
@@ -327,116 +334,7 @@ a{
 
                                     </div><!-- Product End -->
                                 </div>
-
-                                <div class="col pb-20 pt-10">
-                                    <!-- Product Start -->
-                                    <div class="ee-product">
-
-                                        <!-- Image -->
-                                        <div class="image">
-
-
-                                            <a href="{{ route('book',$book->id) }}" class="img"><img src="assets/images/product/product-1.jpg" alt="Product Image"></a>
-
-                                            <div class="wishlist-compare">
-                                                <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
-                                                <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a>
-                                            </div>
-
-
-
-                                        </div>
-
-                                        <!-- Content -->
-                                        <div class="content">
-
-                                            <!-- Category & Title -->
-                                            <div class="category-title">
-
-                                                <a href="{{ route('book',$book->id) }}" class="cat">Science Fiction & Fantasy</a>
-                                                <h5 class="title"><a href="{{ route('book',$book->id) }}">Harry Potter </a></h5>
-
-                                            </div>
-
-                                            <!-- Price & Ratting -->
-
-                                        </div>
-
-                                    </div><!-- Product End -->
-                                </div>
-
-                                <div class="col pb-20 pt-10">
-                                    <!-- Product Start -->
-                                    <div class="ee-product">
-
-                                        <!-- Image -->
-                                        <div class="image">
-
-                                            <a href="{{ route('book',$book->id) }}" class="img"><img src="assets/images/product/product-1.jpg" alt="Product Image"></a>
-
-                                            <div class="wishlist-compare">
-                                                <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
-                                                <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a>
-                                            </div>
-
-
-
-                                        </div>
-
-                                        <!-- Content -->
-                                        <div class="content">
-
-                                            <!-- Category & Title -->
-                                            <div class="category-title">
-
-                                                <a href="{{ route('book',$book->id) }}" class="cat">Business & Money</a>
-                                                <h5 class="title"><a href="{{ route('book',$book->id) }}">The 48 Laws of Power</a></h5>
-
-                                            </div>
-
-                                            <!-- Price & Ratting -->
-
-
-                                        </div>
-
-                                    </div><!-- Product End -->
-                                </div>
-
-                                <div class="col pb-20 pt-10">
-                                    <!-- Product Start -->
-                                    <div class="ee-product">
-
-                                        <!-- Image -->
-                                        <div class="image">
-
-                                            <a href="{{ route('book',$book->id) }}" class="img"><img src="assets/images/product/product-1.jpg" alt="Product Image"></a>
-                                            <div class="wishlist-compare">
-                                                <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
-                                                <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a>
-                                            </div>
-
-
-
-                                        </div>
-
-                                        <!-- Content -->
-                                        <div class="content">
-
-                                            <!-- Category & Title -->
-                                            <div class="category-title">
-
-                                                <a href="{{ route('book',$book->id) }}" class="cat">Business Management</a>
-                                                <h5 class="title"><a href="{{ route('book',$book->id) }}">Dare to Lead</a></h5>
-
-                                            </div>
-
-                                            <!-- Price & Ratting -->
-
-                                        </div>
-
-                                    </div><!-- Product End -->
-                                </div>
-
+                                @endforeach
 
                             </div><!-- Product Slider End -->
                         </div><!-- Product Slider Wrap End -->
