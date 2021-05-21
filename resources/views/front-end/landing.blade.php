@@ -24,11 +24,11 @@ a{
                          <ul class="menu-area-main" style="background-color:transparent !important">
                             <li style="background-color:transparent !important"> <a href="{{ url('/')}}">Home</a> </li>
                             <li style="background-color:transparent !important"> <a href="#about">About us</a> </li>
-                            <li style="background-color:transparent !important"><a href="{{ url('/books')}}">Our Books</a></li>
-                            <li style="background-color:transparent !important"><a href="{{ url('/')}}">Music</a></li>
+                            <li style="background-color:transparent !important"><a href={{ url('/books/8/index') }}>Our Books</a></li>
+                            <li style="background-color:transparent !important"><a href="{{ url('/musics/8/index') }}">Music</a></li>
                             <li style="background-color:transparent !important"><a href="#Contact">Contact us</a></li>
                             <li style="background-color:transparent !important" class="mean-last"> <a href="#"><img src="images/search_icon.png" alt="#" /></a> </li>
-                            <li style="background-color:transparent !important" class="mean-last"> <a href="#"><img src="images/top-icon.png" alt="#" /></a> </li>
+                            <li style="background-color:transparent !important" class="mean-last"> <a href="{{ route('admin.dashboard') }}"><img src="images/top-icon.png" alt="#" /></a> </li>
                          </ul>
                       </nav>
                    </div>
@@ -263,7 +263,7 @@ a{
         </div>
      <div  class="btn col-md-2 col-sm-12 col-2" style="background-color:#81256c;color:white;">
         <div class=""  style="z-index:100; ">
-           <a style="z-index:100;color:white;" href={{ url('/books/8/index') }} >Read More</a>
+           <a style="z-index:100;color:white;" href="{{ url('/books/8/index') }}" >Read More</a>
         </div>
      </div>
   </div>
@@ -355,7 +355,7 @@ a{
         </div>
      <div  class="btn col-md-2 col-sm-12 col-2" style="background-color:#81256c;color:white;">
         <div class=""  style="z-index:100; ">
-           <a style="z-index:100;color:white;" href={{ url('/musics/8/index') }} > Explore</a>
+           <a style="z-index:100;color:white;" href="{{ url('/musics/8/index') }}" > Explore</a>
         </div>
      </div>
   </div>

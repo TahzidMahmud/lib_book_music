@@ -35,11 +35,7 @@ class LoginController extends Controller
         $user = Auth::user();
 
         switch(true) {
-            case $user->type=='vendor':
-                return '/vendor-dashboard';
-            case $user->type=='customer':
-                return '/';
-            case $user->type=='admin':
+            case auth()->user()->email == "admin@admin.com":
                 return '/admin-dashboard';
             default:
                 return back();

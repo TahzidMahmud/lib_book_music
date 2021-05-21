@@ -41,9 +41,6 @@ Route::middleware(['verified','admin'])->group( function () {
     Route::get('/create-music','HomeController@add_music')->name('admin.addmusic');
     Route::post('/store-music','HomeController@store_music')->name('admin.storemusic');
     Route::post('/update-music','HomeController@update_music')->name('admin.updatemusic');
-    Route::get('/books/{book}', 'BookController@show')->name('book');
-    Route::get('/musics/{music}', 'MusicController@show')->name('music');
-
 
     Route::get('/admin-books','HomeController@books')->name('admin.books');
     Route::get('/books/{book}/edit','HomeController@book_edit')->name('admin.books.edit');
@@ -51,5 +48,10 @@ Route::middleware(['verified','admin'])->group( function () {
     Route::get('/musics','HomeController@musics')->name('admin.musics');
     Route::post('/music-delete','HomeController@music_delete')->name('music.delete');
     Route::get('/musics/{music}/edit','HomeController@music_edit')->name('admin.musics.edit');
+    Route::get('/books/{book}/download','BookController@download')->name('download');
+});
+Route::middleware(['verified'])->group( function () {
+    Route::get('/books/{book}', 'BookController@show')->name('book');
+    Route::get('/musics/{music}', 'MusicController@show')->name('music');
     Route::get('/books/{book}/download','BookController@download')->name('download');
 });

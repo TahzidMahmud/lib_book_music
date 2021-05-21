@@ -92,7 +92,7 @@
 
                             <!-- Section Title Start -->
                             <div class="col-12 mb-40 mt-4">
-                                <div class="section-title-one" data-title="All BOOKS"><h1>All BOOKS</h1></div>
+                                <div class="section-title-one" data-title="All BOOKS"><h1>All BOOKS</h1></div><hr>
                             </div><!-- Section Title End -->
 
                             <!-- Product Tab Filter Start -->
