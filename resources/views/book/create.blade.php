@@ -23,7 +23,7 @@
             <div class="form-group">
                 <label for="exampleFormControlFile" class="d-flex justify-content-center display-4">Upload Cover Image</label><br>
                 <label for="coverimage" class="d-flex justify-content-center"><h1 class="text-center"><i class="fas fa-image text-primary"></i></h1></label>
-                <input required style="display: none;cursor:none;" type="file" onchange="cc()" class="form-control-file" id="coverimage"  name="image" accept=".png,.jpg,.jpeg,.PNG,.JPG,.JPEG">
+                <input  style="display: none;cursor:none;" type="file" onchange="cc()" class="form-control-file" id="coverimage"  name="image" accept=".png,.jpg,.jpeg,.PNG,.JPG,.JPEG">
                 <div style="display:flex;justify-content:center;">
                     <img src="" style="display:none;" id="selectedimage">
                     <span style="display:none;" onclick="cross()" id="crossbutton" class="text-center">x</span>
@@ -34,7 +34,7 @@
             <div class="form-group">
                 <label for="exampleFormControlFile" class="d-flex justify-content-center display-4">Upload PDF</label><br>
                 <label for="exampleFormControlFile2" class="d-flex justify-content-center"><h1 class="text-center"><i class="fas fa-upload text-primary"></i></h1></label>
-                <input required style="display: none;cursor:none;"  onchange="fs()" type="file" class="form-control-file" id="exampleFormControlFile2" accept=".pdf" name="pdf">
+                <input  style="display: none;cursor:none;"  onchange="fs()" type="file" class="form-control-file" id="exampleFormControlFile2" accept=".pdf" name="pdf">
                 <h4 id="prevf" class="text text-primary text-center"></h4>
             </div>
             <br>

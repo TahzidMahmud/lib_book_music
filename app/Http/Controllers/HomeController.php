@@ -59,19 +59,25 @@ class HomeController extends Controller
         return view('book.create',compact('genres'));
     }
     public function store_book(Request $request){
-        $image_fileName = time().'.'.$request->image->extension();
-        $request->image->move(public_path('images'), $image_fileName);
-        $pdf_fileName = time().'.'.$request->pdf->extension();
-        $request->pdf->move(public_path('pdfs'), $pdf_fileName);
+        if($request->image && $request->pdf){
+            $image_fileName = time().'.'.$request->image->extension();
+            $request->image->move(public_path('images'), $image_fileName);
+            $pdf_fileName = time().'.'.$request->pdf->extension();
+            $request->pdf->move(public_path('pdfs'), $pdf_fileName);
 
-        Book::create([
-            'genre'=>$request->genre,
-            'title'=>$request->title,
-            'description'=>$request->description,
-            'path'=>$pdf_fileName,
-            'image'=>$image_fileName
-        ]);
-        return back()->with(['message'=>'Book Added To the Collection Successfully..!!','stat'=>'success']);
+            Book::create([
+                'genre'=>$request->genre,
+                'title'=>$request->title,
+                'description'=>$request->description,
+                'path'=>$pdf_fileName,
+                'image'=>$image_fileName
+            ]);
+            return back()->with(['message'=>'Book Added To the Collection Successfully..!!','stat'=>'success']);
+        }else{
+            return back()->with(['message'=>'Must Select Image And PDF File...!!!','stat'=>'danger']);
+
+        }
+
     }
     public function add_music(){
         return view('music.create');
