@@ -3,7 +3,7 @@
 @extends('layouts.front-end.theme')
 @section('section')
 <!-- Single Product Section Start -->
-<div class="product-section section mt-90 mb-90">
+<div class="product-section section mt-90 mb-90" >
     <br>
     <br>
     <div class="container">
@@ -25,16 +25,17 @@
             <div class="col-md-4" style="max-height: 100vh;overflow:scroll-y;">
                 @foreach ($musics as $music )
                     <div class="row" >
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="sideframes card-image" >
-                                    {!! $music->link !!}
-                                </div><br>
-                                <h6>{{ $music->title }}</h6>
-                                <p>{{ $music->description }}</p>
-                            </div>
-                        </div>
-
+                        <h1><b>You Might Like</b></h1>
+                        <a href="{{ route('music',$music->id) }}">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="sideframes card-image" >
+                                        {!! $music->link !!}
+                                    </div><br>
+                                    <h6>{{ $music->title }}</h6>
+                                    <p style="text-decoration: none;">{{ $music->description }}</p>
+                                </div>
+                            </div></a>
                     </div>
                 @endforeach
             </div>

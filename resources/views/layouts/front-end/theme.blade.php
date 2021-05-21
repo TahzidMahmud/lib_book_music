@@ -33,7 +33,7 @@
 
 </head>
 
-<body>
+<body style="background-color:rgba(220, 214, 221, 0.945);">
 <style>
 a{
    background-color:transparent !important;

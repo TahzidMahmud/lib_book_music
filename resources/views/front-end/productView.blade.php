@@ -3,8 +3,8 @@
 @extends('layouts.front-end.theme')
 @section('section')
 <!-- Single Product Section Start -->
-<div class="product-section section mt-90 mb-90">
-    <div class="container">
+<div class="product-section section mt-90 mb-90" >
+    <div class="container" >
         @if(Session::has('message'))
             <div  class="alert alert-danger">
                 <h1 >{{ Session::get('message') }}</h1>
