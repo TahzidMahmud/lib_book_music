@@ -22,7 +22,7 @@
                 <h5>{{ $music->title }}</h5>
                 <p>{{ $music->description }}</p>
             </div>
-            <div class="col-md-4" style="max-height: 100vh;overflow:scroll-y;">
+            <div class="col-md-4" style="max-height: 100vh;overflow-y:scroll;">
                 @foreach ($musics as $music )
                     <div class="row" >
                         <h1><b>You Might Like</b></h1>
