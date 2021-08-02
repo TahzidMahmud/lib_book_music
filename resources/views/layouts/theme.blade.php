@@ -43,7 +43,7 @@
         <div class="sidebar-brand-icon">
           <i class="fas fa-user"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Vendor's Dashboard</div>
+        <div class="sidebar-brand-text mx-3">Admin Dashboard</div>
       </a>
 
       <!-- Divider -->
@@ -65,21 +65,21 @@
       </div>
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link " href=""  >
+        <a class="nav-link " href="{{ route('admin.dashboard') }}"  >
           <i class="fas fa-fw fa-cog"></i>
           <span>Profile </span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        {{-- <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Settings:</h6>
             <a class="collapse-item" href="security.html">Secutity</a>
             <a class="collapse-item" href="account.html">Account</a>
           </div>
-        </div>
+        </div> --}}
       </li>
 
       <!-- Nav Item - Utilities Collapse Menu -->
-      <li class="nav-item">
+      {{-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-wrench"></i>
           <span>Utilities</span>
@@ -93,7 +93,7 @@
             <a class="collapse-item" href="utilities-other.html">Other</a>
           </div>
         </div>
-      </li>
+      </li> --}}
 
       <!-- Divider -->
       <hr class="sidebar-divider">
@@ -105,31 +105,31 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Posts</span>
+        <a class="nav-link collapsed" href="{{ route('admin.musics') }}">
+          <i class="fas fa-fw fa-music"></i>
+          <span>Musics</span>
         </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        {{-- <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Posts List:</h6>
             <a class="collapse-item" href="">All Post</a>
             <a class="collapse-item" href="">Create new post</a>
 
-        </div>
+        </div> --}}
       </li>
 
       <!-- Nav Item - Charts -->
-      <li class="nav-item">
+      {{-- <li class="nav-item">
         <a class="nav-link" href="charts.html">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Ratings</span></a>
-      </li>
+      </li> --}}
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="{{ route('admin.books') }}">
           <i class="fas fa-fw fa-table"></i>
-          <span>Tutorials</span></a>
+          <span>Books</span></a>
       </li>
 
       <!-- Divider -->

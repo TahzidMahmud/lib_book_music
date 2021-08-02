@@ -15,21 +15,21 @@
 	============================================ -->
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href={{ asset("css/bootstrap.min.css") }}>
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
     <!-- Icon Font CSS -->
-    <link rel="stylesheet" href={{  asset("css/icon-font.min.css") }}>
+    <link rel="stylesheet" href="{{  asset('css/icon-font.min.css') }}">
 
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href={{ asset("css/plugins.css") }}>
+    <link rel="stylesheet" href="{{ asset('css/plugins.css') }}">
 
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href={{ asset("css/style.css") }}>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
      <!-- style css -->
-     <link rel="stylesheet" href={{ asset("css/style2.css") }}>
+     <link rel="stylesheet" href="{{ asset('css/style2.css') }}">
 
     <!-- Modernizer JS -->
-    <script src={{ asset("js/vendor/modernizr-2.8.3.min.js") }}></script>
+    <script src="{{ asset('js/vendor/modernizr-2.8.3.min.js') }}"></script>
 
 </head>
 
@@ -98,16 +98,16 @@ a{
 ============================================ -->
 
 <!-- jQuery JS -->
-<script src={{ asset("js/vendor/jquery-1.12.4.min.js") }}></script>
+<script src="{{ asset('js/vendor/jquery-1.12.4.min.js') }}"></script>
 <!-- Popper JS -->
-<script src={{ asset("js/popper.min.js") }}></script>
+<script src="{{ asset('js/popper.min.js') }}"></script>
 <!-- Bootstrap JS -->
-<script src={{ asset("js/bootstrap.min.js") }}></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
 <!-- Plugins JS -->
-<script src={{ asset("js/plugins.js") }}></script>
+<script src="{{ asset('js/plugins.js') }}"></script>
 
 <!-- Main JS -->
-<script src={{ asset("js/main.js") }}></script>
+<script src="{{ asset('js/main.js') }}"></script>
 
 <script>
      function read(){
