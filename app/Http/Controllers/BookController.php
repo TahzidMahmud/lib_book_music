@@ -51,6 +51,13 @@ class BookController extends Controller
         return view('front-end.productView',compact('book'));
 
     }
+    public function read(Book $book){
+        $read=$book->read_count+1;
+        $book->update([
+            "read_count"=>$read
+        ]);
+        return response(['message'=>'Procedure Run Succesful..!!','stat'=>'success']);
+    }
     public function download(Book $book){
         // dd($book);
 

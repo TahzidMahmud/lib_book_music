@@ -52,6 +52,7 @@ Route::middleware(['verified','admin'])->group( function () {
 });
 Route::middleware(['verified'])->group( function () {
     Route::get('/books/{book}', 'BookController@show')->name('book');
+    Route::get('/books/{book}/read', 'BookController@read')->name('book.read');
     Route::get('/musics/{music}', 'MusicController@show')->name('music');
     Route::get('/books/{book}/download','BookController@download')->name('download');
 });

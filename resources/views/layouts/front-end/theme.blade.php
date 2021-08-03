@@ -30,6 +30,7 @@
 
     <!-- Modernizer JS -->
     <script src="{{ asset('js/vendor/modernizr-2.8.3.min.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 
 </head>
 
@@ -110,8 +111,12 @@ a{
 <script src="{{ asset('js/main.js') }}"></script>
 
 <script>
-     function read(){
+     function read(id){
                     document.getElementById("iframepdf").style.display="block";
+
+                    window.axios.get(`/books/${id}/read`).then((res)=>{
+                        console.log("red");
+                    })
                 }
 </script>
 

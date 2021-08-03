@@ -78,7 +78,7 @@
 
 
                             <a href={{ route('download',$book->id)}}><button class="btn ml-2" style="color:black;background-color:rgb(255, 208, 0);">Download</button></a>
-                            <a href="#"><button onclick="read()" class="btn ml-2" id="read-btn" style="color:rgb(255, 255, 255);background-color:rgb(197, 11, 11);">Read Now</button></a>
+                            <a href="#"><button onclick="read({{$book->id}})" class="btn ml-2" id="read-btn" style="color:rgb(255, 255, 255);background-color:rgb(197, 11, 11);">Read Now</button></a>
 
                              <div class="wishlist-compare">
                                  {{-- <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a> --}}
