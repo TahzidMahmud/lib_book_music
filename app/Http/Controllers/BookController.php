@@ -53,6 +53,7 @@ class BookController extends Controller
     }
     public function download(Book $book){
         // dd($book);
+
         $filename="";
         $file_path = public_path().'/pdfs/'.$book->path;
         $headers = array(
@@ -61,6 +62,10 @@ class BookController extends Controller
         );
         if ( file_exists( $file_path ) ) {
             // Send Download
+            $dowload=$book->download_count +1;
+            $book->update([
+                "download_count"=>$dowload
+            ]);
             return \Response::download( $file_path, $filename, $headers );
         } else {
             // Error

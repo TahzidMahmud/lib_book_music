@@ -8,6 +8,7 @@
              <th class="text-center" scope="col">Cover</th>
              <th class="text-center" scope="col">Title</th>
              <th class="text-center" scope="col">File</th>
+             <th class="text-center" scope="col">Download(times)</th>
              <th class="text-center" scope="col">Action</th>
           </tr>
         </thead>
@@ -17,6 +18,7 @@
                 <td scope="row"><img style="height: 10vh;width:10vw;" src="{{ asset('images'.'/'.$book->image) }}" alt="cover photo"></td>
                 <td>{{ $book->title }}</td>
                 <td>{{ $book->title.'pdf' }}</td>
+                <td class="text-center">{{ $book->download_count }}</td>
                 <td>
                   <div class="d-flex justify-content-around">
 
