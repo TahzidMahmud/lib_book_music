@@ -19,7 +19,7 @@
                     <div class="col">
 
                         <!-- Shop Top Bar Start -->
-                        {{-- <div class="shop-top-bar">
+                        <div class="shop-top-bar">
 
                             <!-- Product View Mode -->
                             <div class="product-view-mode">
@@ -40,7 +40,7 @@
                             </div>
 
                             <!-- Product Short -->
-                            <div class="product-short">
+                            {{-- <div class="product-short">
                                 <p>Short by</p>
                                 <select name="sortby" class="nice-select">
                                     <option value="trending">Trending items</option>
@@ -50,14 +50,14 @@
                                     <option value="price-asc">Price: low to high</option>
                                     <option value="price-desc">Price: high to low</option>
                                 </select>
-                            </div>
+                            </div> --}}
 
                             <!-- Product Pages -->
-                            <div class="product-pages">
+                            {{-- <div class="product-pages">
                                 <p>Pages 1 of 25</p>
-                            </div>
+                            </div> --}}
 
-                        </div><!-- Shop Top Bar End --> --}}
+                        </div><!-- Shop Top Bar End -->
 
                     </div>
                 </div>
@@ -101,9 +101,6 @@
 
                                     <!-- Tab Filter Toggle -->
                                     <button class="product-tab-filter-toggle">showing: <span></span><i class="icofont icofont-simple-down"></i></button>
-
-
-
                                 </div>
                             </div><!-- Product Tab Filter End -->
 
@@ -127,10 +124,6 @@
                                                         <div class="image">
 
                                                             <a href="{{ route('book',$book->id) }}" class="img"><img src="{{ asset('images'.'/'.$book->image) }}" style="height: 40vh;width:30vw;" alt="Product Image"></a>
-
-
-
-
 
                                                         </div>
 
@@ -209,7 +202,7 @@
 
                                                 @endforeach
 
-
+                                                {{ $books->links() }}
 
                                             </div><!-- Product Slider End -->
                                         </div><!-- Product Slider Wrap End -->
