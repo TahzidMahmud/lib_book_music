@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>lib_book_music
+    <title>Gaan_Ar_Boi
     </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,7 +34,7 @@
 
 </head>
 
-<body style="background-color:rgba(220, 214, 221, 0.945);">
+<body style="background-color: white;height:100vh;">
 <style>
 a{
    background-color:transparent !important;
@@ -119,7 +119,20 @@ a{
                     })
                 }
 </script>
+<script>
+    $("#paginate").change(function(){
 
+        var val=document.getElementById("paginate").value;
+        // var url = window.location.href;
+        // // let temp=url.slice(0, -1);
+        // let temp=url.substring(0, url.lastIndexOf("/") + 1);
+        // let f=temp.concat($val);
+        location.replace(`/books/${val}/index`);
+
+
+    })
+
+</script>
 
 
 

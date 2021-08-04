@@ -15,7 +15,8 @@ class BookController extends Controller
     public function index($qty)
     {
         $books=Book::paginate($qty);
-        return view('front-end.productsView',compact('books'));
+        // dd($books);
+        return view('front-end.productsView',compact('books','qty'));
 
     }
 
