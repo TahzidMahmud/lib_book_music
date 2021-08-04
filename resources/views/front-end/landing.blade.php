@@ -88,16 +88,7 @@
                 </div><!-- Section Title End -->
 
                 <!-- Product Tab Filter Start -->
-                <div class="col-12 mb-30">
-                    <div class="product-tab-filter">
-
-                        <!-- Tab Filter Toggle -->
-                        <button class="product-tab-filter-toggle">showing: <span></span><i class="icofont icofont-simple-down"></i></button>
-
-
-
-                    </div>
-                </div><!-- Product Tab Filter End -->
+               <!-- Product Tab Filter End -->
 
                 <!-- Product Tab Content Start -->
                 <div class="col-12">
@@ -118,7 +109,7 @@
                                             <!-- Image -->
                                             <div class="image">
 
-                                                <a href="{{ route('book',$book->id) }}" class="img"><img src="{{ asset('images'.'/'.$book->image) }}" style="height: 40vh;width:30vw;" alt="Product Image"></a>
+                                                <a href="{{ route('book',$book->id) }}" class="img"><img src="{{ asset('images'.'/'.$book->image) }}" style="height: 40vh;width:100%;" alt="Product Image"></a>
 
 
 
@@ -151,55 +142,7 @@
                         </div><!-- Tab Pane End -->
 
                         <!-- Tab Pane Start -->
-                        <div class="tab-pane fade" id="tab-two">
-
-                            <!-- Product Slider Wrap Start -->
-                            <div class="product-slider-wrap product-slider-arrow-one">
-                                <!-- Product Slider Start -->
-                                <div class="product-slider product-slider-4-full">
-                                    @foreach ($books as $book )
-                                    <div class="col pb-20 pt-10">
-                                        <!-- Product Start -->
-                                        <div class="ee-product">
-
-                                            <!-- Image -->
-                                            <div class="image">
-
-                                                <a href="{{ route('book',$book->id) }}" class="img"><img src="{{ asset('images'.'/'.$book->image) }}" alt="Product Image"></a>
-
-                                                <div class="wishlist-compare">
-                                                    <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
-                                                    <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a>
-                                                </div>
-
-
-
-                                            </div>
-
-                                            <!-- Content -->
-                                            <div class="content">
-
-                                                <!-- Category & Title -->
-                                                <div class="category-title">
-
-                                                    <a href="{{ route('book',$book->id) }}" class="cat">{{ $book->genre }}</a>
-                                                    <h5 class="title"><a href="{{ route('book',$book->id) }}">{{ $book->title }}</a></h5>
-
-                                                </div>
-
-                                                <!-- Price & Ratting -->
-
-                                            </div>
-
-                                        </div><!-- Product End -->
-                                    </div>
-                                    @endforeach
-
-
-                                </div><!-- Product Slider End -->
-                            </div><!-- Product Slider Wrap End -->
-
-                        </div><!-- Tab Pane End -->
+                        <!-- Tab Pane End -->
 
                     </div>
                 </div><!-- Product Tab Content End -->
@@ -209,10 +152,10 @@
     </div><!-- Feature Product Section End -->
 
     <div class="row">
-        <div class="col-md-5 col-sm-12 col-5">
+        <div class="col-md-5 col-sm-12 col-4">
 
         </div>
-     <div  class="btn col-md-2 col-sm-12 col-2" style="background-color:#81256c;color:white;">
+     <div  class="btn col-md-2 col-sm-12 col-4" style="background-color:#81256c;color:white;">
         <div class=""  style="z-index:100; ">
            <a style="z-index:100;color:white;" href="{{ url('/books/8/index') }}" >Read More</a>
         </div>
@@ -221,7 +164,7 @@
 
 <!-- Feature Product Section Start -->
 <div class="product-section section mb-70">
-    <div class="container">
+    <div class="container"><br>
         <div class="row">
 
             <!-- Section Title Start -->
@@ -253,9 +196,9 @@
 
                                             <a href="{{ route('music',$music->id) }}" class="img">
                                                 @if($music->thumb)
-                                                <img src="{{ asset('images'.'/'.$music->thumb) }}" alt="Product Image">
+                                                <img src="{{ asset('images'.'/'.$music->thumb) }}" style="height: 40vh;width:100%;" alt="Product Image">
                                                 @else
-                                                <img src="{{ asset('images/thump.jpg') }}" alt="Product Image">
+                                                <img src="{{ asset('images/thump.jpg') }}" style="height: 40vh;width:100%;" alt="Product Image">
                                                 @endif
                                             </a>
 
@@ -301,10 +244,10 @@
 
 
     <div class="row">
-        <div class="col-md-5 col-sm-12 col-5">
+        <div class="col-md-5 col-sm-12 col-4">
 
         </div>
-     <div  class="btn col-md-2 col-sm-12 col-2" style="background-color:#81256c;color:white;">
+     <div  class="btn col-md-2 col-sm-12 col-4" style="background-color:#81256c;color:white;">
         <div class=""  style="z-index:100; ">
            <a style="z-index:100;color:white;" href="{{ url('/musics/8/index') }}" > Explore</a>
         </div>
