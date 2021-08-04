@@ -15,68 +15,12 @@
 
             <div class="col-12">
 
-                <div class="row mb-50">
-                    <div class="col">
 
-                        <!-- Shop Top Bar Start -->
-                        <div class="shop-top-bar">
-
-                            <!-- Product View Mode -->
-
-
-                            <!-- Product Showing -->
-                            {{-- <div class="product-showing">
-                                <p>Showing</p>
-                                <select id="paginate" name="showing" class="nice-select">
-                                    @if($qty==8)
-                                        <option selected value="8">8</option>
-
-                                    @else
-                                        <option  value="8">8</option>
-                                    @endif
-                                        @if($qty==12)
-                                            <option selected value="12">12</option>
-
-                                        @else
-                                            <option value="12">12</option>
-                                        @endif
-                                        @if($qty==16)
-                                            <option selected value="16">16</option>
-
-                                        @else
-                                            <option value="16">16</option>
-                                        @endif
-                                        @if($qty==20)
-                                            <option selected value="20">20</option>
-
-                                        @else
-                                            <option value="20">20</option>
-                                        @endif
-                                        @if($qty==24)
-                                            <option selected value="24">24</option>
-
-                                        @else
-                                            <option value="24">24</option>
-                                        @endif
-
-                                </select>
-                            </div> --}}
-
-                            <!-- Product Short -->
-
-
-                            <!-- Product Pages -->
-
-
-                        </div><!-- Shop Top Bar End -->
-
-                    </div>
-                </div>
 
                 <!-- Shop Product Wrap Start -->
                 <!-- Shop Product Wrap Start -->
-                <div class="shop-product-wrap grid row m-4">
-                    <p>Showing</p>
+                <div class="shop-product-wrap grid row m-4" id="perp" style="margin-top:18vh!important;">
+                    <p>Showing Per-page</p>
                     <select id="paginate" name="showing" class="nice-select">
                         @if($qty==8)
                             <option selected value="8">8</option>

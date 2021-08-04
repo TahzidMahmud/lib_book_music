@@ -15,7 +15,7 @@ class MusicController extends Controller
     public function index($qty)
     {
         $musics=Music::paginate($qty);
-        return view('front-end.musicsView',compact('musics'));
+        return view('front-end.musicsView',compact('musics','qty'));
 
     }
 
@@ -49,6 +49,10 @@ class MusicController extends Controller
     public function show(Music $music)
     {
         $musics=Music::all();
+        $count=$music->click_count+1;
+        $music->update([
+            "click_count"=>$count
+        ]);
         return view('front-end.musicView',compact('music','musics'));
     }
 

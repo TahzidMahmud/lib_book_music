@@ -253,8 +253,10 @@
         <!-- End of Topbar -->
 
         <!-- Main Body -->
+        <div style="overflow-y: scroll;">
+            @yield('content')
+        </div>
 
-        @yield('content')
 
       </div>
       <!-- End of Main Content -->

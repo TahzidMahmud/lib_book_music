@@ -8,6 +8,7 @@
              <th class="text-center" scope="col">Cover</th>
              <th class="text-center" scope="col">Title</th>
              <th class="text-center" scope="col">Music</th>
+             <th class="text-center" scope="col">Click-count(times)</th>
              <th class="text-center" scope="col">Action</th>
           </tr>
         </thead>
@@ -23,7 +24,7 @@
                 </td>
                 <td>{{ $music->title }}</td>
                 <td style="height: 10vh!important;width:10vw!important;">{!! $music->link !!}</td>
-
+                <td class="text-center">{{ $music->click_count }}</td>
                 <td>
                   <div class="d-flex justify-content-around">
 
